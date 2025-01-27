@@ -1,3 +1,22 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
+.btn {
+    box-shadow: none;
+    color: #fff;
+    background-color: #FE0000;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    opacity: 1;
+}
+.card {
+    border: 0;
+    box-shadow: 4px 4px 12px 0 #00000033;
+    border-radius: 18px;
+    /* overflow: hidden; */
+}
+
+.card-header {
+    border: 0;
+    padding: 1rem;
+}
