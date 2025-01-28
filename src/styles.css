@@ -1,5 +1,5 @@
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
-
+@import "../node_modules/ngx-countries-dropdown/assets/styles.css";
 .btn {
     box-shadow: none;
     color: #fff;

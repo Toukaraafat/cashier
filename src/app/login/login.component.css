@@ -161,3 +161,18 @@ a:hover {
 .main-color {
     color: #FE0000 !important;
 }
+.ipv_selected-item {
+    position: relative;
+    padding: 0 0px 0 0px !important;
+    /* height: 40px; */
+    line-height: 40px;
+    border: 1px solid #a6a6a6;
+    background: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex
+;
+    align-items: center;
+}
