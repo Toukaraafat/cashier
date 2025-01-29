@@ -1,1 +1,58 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+    <div class="upper">
+        <img src="assets/images/logo.png" class="sidebar-logo">
+        <ul class="sidebar-menu list-unstyled px-0 py-3">
+            <li class="sidebar-item active">
+                <a routerLink="/" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+          true}">
+                    <img src="assets/images/chicken.png" />
+                    <span class="pe-3">القائمة</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a routerLink="/orders" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+          true}">
+                    <img src="assets/images/orders-icon.png" />
+                    <span class="pe-3">الطلبات</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a routerLink="/tables" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+          true}">
+                    <img src="assets/images/tables-icon.png" />
+                    <span class="pe-3">الطاولات</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a routerLink="/pills" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+          true}">
+                    <img src="assets/images/pills-icon.png" />
+                    <span class="pe-3">الفواتير</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+    <div class="lower">
+        <ul class="sidebar-menu list-unstyled p-0">
+            <li class="sidebar-item">
+                <a routerLink="/settings" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+          true}">
+                    <img src="assets/images/settings.png" />
+                    <span class="pe-3">الإعدادات</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a routerLink="/logOut" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+          true}">
+                    <img src="assets/images/logout.png" />
+                    <span class="pe-3">تسجيل الخروج</span>
+                </a>
+            </li>
+
+
+        </ul>
+        <img class="sidebar-man" src="assets/images/sidebar-man.png" alt="sidebar-man" />
+    </div>
+</div>

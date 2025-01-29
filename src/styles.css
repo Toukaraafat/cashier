@@ -11,7 +11,7 @@
 }
 .card {
     border: 0;
-    box-shadow: 4px 4px 12px 0 #00000033;
+    box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
     border-radius: 18px;
     /* overflow: hidden; */
 }
@@ -19,4 +19,11 @@
 .card-header {
     border: 0;
     padding: 1rem;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.main-color {
+    color: #FE0000 !important;
 }
