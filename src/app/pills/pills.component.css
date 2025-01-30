@@ -1,0 +1,17 @@
+.nav-pills .nav-link.sub{
+    background-color: #fff;
+    box-shadow: 4px 4px 12px 0 #00000033;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #fe0000;
+    color: #fff;
+}
+.sub-sub-content .card,
+.second-sub .card{
+    padding: 0.5rem;
+}
+.sub-sub-content .card p,
+.second-sub .card p{
+    margin: 0;
+}

@@ -1,1 +1,1115 @@
-<p>orders-card works!</p>
+    `<div class="card p-3 mt-3">
+    <ul class="nav nav-pills mb-3 px-0 row" id="pills-tab1" role="tablist">
+      <li class="nav-item col-md-6" role="presentation">
+        <button class="nav-link main active w-100" id="pills-orders-tab" data-bs-toggle="pill"
+          data-bs-target="#pills-orders" type="button" role="tab" aria-controls="pills-orders" aria-selected="true">
+          <img src="assets/images/orders-icon.png" alt="" />
+          <span>
+            الطلبات
+          </span>
+        </button>
+      </li>
+      <li class="nav-item col-md-6" role="presentation">
+        <button class="nav-link main w-100" id="pills-pills-tab" data-bs-toggle="pill" data-bs-target="#pills-pills"
+          type="button" role="tab" aria-controls="pills-pills" aria-selected="false">
+          <img src="assets/images/pills-icon.png" alt="" />
+          <span>الفواتير</span>
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent1">
+      <div class="tab-pane fade show active" id="pills-orders" role="tabpanel" aria-labelledby="pills-orders-tab">
+        <ul class="nav nav-pills mb-3 px-0" id="pills-tab2" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link sub active" id="pills-in-tab" data-bs-toggle="pill" data-bs-target="#pills-in"
+              type="button" role="tab" aria-controls="pills-in" aria-selected="true">
+              <figure class="mb-0">
+                <img src="assets/images/in.png" alt="" />
+              </figure>
+              <span> في المطعم </span>
+              <span>(6)</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-out-tab" data-bs-toggle="pill" data-bs-target="#pills-out"
+              type="button" role="tab" aria-controls="pills-out" aria-selected="false">
+              <figure class="mb-0">
+                <img src="assets/images/out.png" alt="" />
+              </figure>
+              <span> خارج المطعم </span>
+              <span>(12)</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#pills-delivery"
+              type="button" role="tab" aria-controls="pills-delivery" aria-selected="false">
+              <figure class="mb-0">
+                <img src="assets/images/delivery.png" alt="" />
+              </figure>
+              <span> توصيل </span>
+              <span>(4)</span>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent2">
+          <div class="tab-pane fade show active" id="pills-in" role="tabpanel" aria-labelledby="pills-in-tab">
+            <ul class="nav nav-pills mb-3 px-0 row" id="pills-tab3" role="tablist">
+              <li class="nav-item col-md-6" role="presentation">
+                <button class="nav-link sub-sub w-100 active" id="pills-all-orders-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-all-orders" type="button" role="tab" aria-controls="pills-all-orders"
+                  aria-selected="true">
+                  <span>
+                    كل الطلبات
+                  </span></button>
+              </li>
+              <li class="nav-item col-md-6" role="presentation">
+                <button class="nav-link sub-sub w-100" id="pills-pending-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-pending" type="button" role="tab" aria-controls="pills-pending"
+                  aria-selected="false">
+                  <span>
+                    الطلبات المعلقة
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content sub-sub-content" id="pills-tabContent3">
+              <div class="tab-pane fade show active" id="pills-all-orders" role="tabpanel"
+                aria-labelledby="pills-all-orders-tab">
+                <div class="row m-0">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-main text-white">طاولة 1</p>
+                        <p class="btn-static btn-static-success">جاهزة للتقديم</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-main text-white">طاولة 11</p>
+                        <p class="btn-static btn-static-warning">
+                          يتم تجهزها </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-main text-white">طاولة 41</p>
+                        <p class="btn-static btn-static-danger">ملغية</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-main text-white">طاولة 19</p>
+                        <p class="btn-static btn-static-secondary">مكتملة </p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-pending" role="tabpanel" aria-labelledby="pills-pending-tab">
+                <div class="row m-0">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-danger">طاولة 2</p>
+                        <p class="btn-static btn-static-main text-white">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-danger">طاولة 2</p>
+                        <p class="btn-static btn-static-main text-white">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-danger">طاولة 2</p>
+                        <p class="btn-static btn-static-main text-white">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="btn-static btn-static-danger">طاولة 2</p>
+                        <p class="btn-static btn-static-main text-white">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-out" role="tabpanel" aria-labelledby="pills-out-tab">
+            <ul class="nav nav-pills mb-3 px-0 row" id="pills-tab9" role="tablist">
+              <li class="nav-item col-md-6" role="presentation">
+                <button class="nav-link sub-sub w-100 active" id="pills-all-orders2-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-all-orders2" type="button" role="tab" aria-controls="pills-all-orders"
+                  aria-selected="true">
+                  <span>
+                    كل الطلبات
+                  </span></button>
+              </li>
+              <li class="nav-item col-md-6" role="presentation">
+                <button class="nav-link sub-sub w-100" id="pills-pending3-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-pending3" type="button" role="tab" aria-controls="pills-pending3"
+                  aria-selected="false">
+                  <span>
+                    الطلبات المعلقة
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content sub-sub-content" id="pills-tabContent4">
+              <div class="tab-pane fade show active" id="pills-all-orders2" role="tabpanel"
+                aria-labelledby="pills-all-orders2-tab">
+                <div class="row m-0">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-success w-100">جاهزة للتقديم</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-warning w-100">
+                          يتم تجهزها </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-danger w-100">ملغية</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-secondary w-100">مكتملة </p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-pending3" role="tabpanel" aria-labelledby="pills-pending3-tab">
+                <div class="row m-0">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+  
+                        </p>
+  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+  
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab">
+            <ul class="nav nav-pills mb-3 px-0 row" id="pills-tab9" role="tablist">
+              <li class="nav-item col-md-6" role="presentation">
+                <button class="nav-link sub-sub w-100 active" id="pills-all-orders3-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-all-orders3" type="button" role="tab" aria-controls="pills-all-orders3"
+                  aria-selected="true">
+                  <span>
+                    كل الطلبات
+                  </span></button>
+              </li>
+              <li class="nav-item col-md-6" role="presentation">
+                <button class="nav-link sub-sub w-100" id="pills-pending4-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-pending4" type="button" role="tab" aria-controls="pills-pending4"
+                  aria-selected="false">
+                  <span>
+                    الطلبات المعلقة
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content sub-sub-content" id="pills-tabContent3">
+              <div class="tab-pane fade show active" id="pills-all-orders3" role="tabpanel"
+                aria-labelledby="pills-all-orders3-tab">
+                <div class="row m-0">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-success w-100">جاهزة للتقديم</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-warning w-100">
+                          يتم تجهزها </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-danger w-100">ملغية</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-secondary w-100">مكتملة </p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-pending4" role="tabpanel" aria-labelledby="pills-pending4-tab">
+                <div class="row m-0">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+  
+                        </p>
+  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="fw-bold">رقم الطلب</p>
+                        <p class="text-muted">
+                          #28766665
+                        </p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-2">
+                        <p class="text-muted">
+                          3 عناصر
+                        </p>
+  
+                        <p class="text-muted">
+                          6 دقايق
+                        </p>
+                      </div>
+                      <div class="d-flex text-center mb-2">
+                        <p class="btn-static btn-static-main text-white w-100">
+                          تنفيذ الطلب
+  
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <div class="all d-flex justify-content-end  align-items-center mt-4">
+          <a routerLink="/orders" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+            true}">
+          <span class="fs-5 fw-bold ms-3">عرض الكل</span>
+          <img src="assets/images/arrow-right.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-pills" role="tabpanel" aria-labelledby="pills-pills-tab">
+        <ul class="nav nav-pills mb-3 px-0" id="pills-tab2" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link sub active" id="pills-urgent-tab" data-bs-toggle="pill" data-bs-target="#pills-urgent"
+              type="button" role="tab" aria-controls="pills-urgent" aria-selected="true">
+              <span> عاجلة </span>
+              <span>(12)</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-pending2-tab" data-bs-toggle="pill" data-bs-target="#pills-pending2"
+              type="button" role="tab" aria-controls="pills-pending2" aria-selected="false">
+              <span> معلقة</span>
+              <span>(4)</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-previous-tab" data-bs-toggle="pill" data-bs-target="#pills-previous"
+              type="button" role="tab" aria-controls="pills-previous" aria-selected="false">
+              <span> سابقة </span>
+              <span>(16)</span>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content second-sub" id="pills-tabContent2">
+          <div class="tab-pane fade show active" id="pills-urgent" role="tabpanel" aria-labelledby="pills-urgent-tab">
+            <div class="row m-0">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+  
+                    </p>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+  
+                    </p>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-pending2" role="tabpanel" aria-labelledby="pills-pending2-tab">
+            <div class="row m-0">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+  
+                    </p>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+  
+                    </p>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-previous" role="tabpanel" aria-labelledby="pills-previous-tab">
+            <div class="row m-0">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+  
+                    </p>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="fw-bold">رقم الطلب</p>
+                    <p class="text-muted">
+                      #28766665
+                    </p>
+                  </div>
+  
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-muted">
+                      3 عناصر
+                    </p>
+  
+                    <p class="text-muted">
+                      6 دقايق
+                    </p>
+                  </div>
+                  <div class="d-flex text-center mb-2">
+                    <p class="btn-static btn-static-main text-white w-100">
+                      تفاصيل الفاتورة
+  
+                    </p>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <div class="all d-flex justify-content-end  align-items-center mt-4">
+          <a routerLink="/pills" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+            true}">
+          <span class="fs-5 fw-bold ms-3">عرض الكل</span>
+          <img src="assets/images/arrow-right.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

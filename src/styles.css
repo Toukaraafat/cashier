@@ -27,3 +27,44 @@ a{
 .main-color {
     color: #FE0000 !important;
 }
+.text-muted{
+    color:#808080 !important;
+}
+.btn-static{
+    padding-block: 0.25rem;
+    padding-inline: 0.115rem;
+    border-radius: 0.25rem;
+}
+.btn-static-success{
+    background: #CCEAD7;
+}
+.btn-static-warning{
+    background-color: #FFEBC5;
+}
+.btn-static-danger{
+    background-color: #FFE5E5;
+}
+.btn-static-secondary{
+    background-color: #DFDFDF;
+}
+.btn-static-main{
+    background-color: #fe0000;
+}
+.nav-pills .nav-link{
+    background-color: rgba(223, 223, 223, 1);
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-left: 0.75rem;
+    padding: 0.75rem;
+}
+.nav-pills .nav-link span{
+    margin-right: 0.5rem;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #fe0000;
+    color: #fff;
+}
