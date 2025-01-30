@@ -1,1 +1,12 @@
-<p>categories works!</p>
+<div class="d-flex justify-content-between my-4">
+<h2>القائمة</h2>
+<a routerLink="/menu" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+    true}">
+  <span class="fs-5 fw-bold ms-3">عرض الكل</span>
+  <img src="assets/images/arrow-right.svg" alt="" />
+  </a>
+</div>
+<div class="input-wrapper form-control">
+    <i class="fa-solid fa-magnifying-glass text-muted"></i>
+    <input type="text" placeholder="ابحث...">
+</div>

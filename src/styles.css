@@ -68,3 +68,13 @@ a{
     background-color: #fe0000;
     color: #fff;
 }
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.input-wrapper input {
+    padding-right: 1rem;
+    border: none;
+    outline: none;
+}
