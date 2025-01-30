@@ -1,1 +1,369 @@
-<p>categories works!</p>
+<div class="d-flex justify-content-between my-4">
+    <h2>القائمة</h2>
+    <a routerLink="/menu" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
+    true}">
+        <span class="fs-5 fw-bold ms-3">عرض الكل</span>
+        <img src="assets/images/arrow-right.svg" alt="" />
+    </a>
+</div>
+<div class="input-wrapper form-control">
+    <i class="fa-solid fa-magnifying-glass text-muted"></i>
+    <input type="text" placeholder="ابحث...">
+</div>
+<div class="categories">
+    <ul class="nav nav-pills mb-3 px-0 align-items-center justify-content-between" id="pills-tab" role="tablist">
+        <!-- <li class="nav-item mb-2" role="presentation">
+        <button class="nav-link active" id="pills-offers-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-offers" type="button" role="tab" aria-controls="pills-offers"
+            aria-selected="true">
+            <div class="category-button">
+                <img src="SiteAssets/images/offers.png" alt="" class="offer-img" />
+                <p class="me-3 mb-0">
+                    العروض
+                </p>
+            </div>
+        </button>
+    </li> -->
+        <li class="nav-item mb-2" role="presentation">
+            <button class="nav-link " id="pills-discount-tab" data-bs-toggle="pill" data-bs-target="#pills-discount"
+                type="button" role="tab" aria-controls="pills-discount" aria-selected="true">
+                <div class="category-button">
+                    <i class="fas fa-tags main"></i>
+                    <p class="me-3 mb-0">
+                        الخصومات
+                    </p>
+                </div>
+            </button>
+        </li>
+        <li class="nav-item mb-2" role="presentation">
+            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                <div class="category-button">
+                    <img src="SiteAssets/images/intro-plate.png" alt="" />
+                    <p class="me-3 mb-0">
+                        اطباق رئيسية
+                    </p>
+                </div>
+            </button>
+        </li>
+        <li class="nav-item mb-2" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                <div class="category-button">
+                    <img src="SiteAssets/images/plate2.png" alt="" />
+                    <p class="me-3 mb-0">
+                        اطباق جانبية
+                    </p>
+                </div>
+            </button>
+        </li>
+        <li class="nav-item mb-2" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                <div class="category-button">
+                    <img src="SiteAssets/images/plate3.png" alt="" />
+                    <p class="me-3 mb-0">
+                        مقبلات
+                    </p>
+                </div>
+            </button>
+        </li>
+        <li class="nav-item mb-2" role="presentation">
+            <button class="nav-link" id="pills-salad-tab" data-bs-toggle="pill" data-bs-target="#pills-salad"
+                type="button" role="tab" aria-controls="pills-salad" aria-selected="false">
+                <div class="category-button">
+                    <img src="SiteAssets/images/plate4.png" alt="" />
+                    <p class="me-3 mb-0">
+                        سلطات
+                    </p>
+                </div>
+            </button>
+        </li>
+        <li class="nav-item mb-2 " role=" presentation">
+            <button class="nav-link" id="pills-soda-tab" data-bs-toggle="pill" data-bs-target="#pills-soda"
+                type="button" role="tab" aria-controls="pills-soda" aria-selected="false">
+                <div class="category-button">
+                    <img src="SiteAssets/images/plate3.png" alt="" />
+                    <p class="me-3 mb-0">
+                        مشروبات
+                    </p>
+                </div>
+            </button>
+        </li>
+    </ul>
+    <div class="d-flex justify-content-between ">
+        <form>
+            <input class="form-control py-2" type="search" placeholder="ابحث في القائمة" aria-label="Search">
+        </form>
+        <select class="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
+            <option selected>ترتيب حسب </option>
+            <option value="1">الاعلى تقييم</option>
+            <option value="2">اضيف حديثا</option>
+        </select>
+    </div>
+    <div class="tab-content pt-5" id="pills-tabContent">
+        <!-- <div class="tab-pane fade show active" id="pills-offers" role="tabpanel"
+        aria-labelledby="pills-offers-tab">
+        <div class="row mx-0">
+            <div class="col-md-4 mb-4" data-aos="zoom-in">
+                <div class="plate">
+                    <figure class="plate-img m-0">
+                        <img src="SiteAssets/images/plate1.png" alt="">
+                        <figcaption class="offers-badge">
+                            <img src="SiteAssets/images/offers.png" alt="">
+                            عرض
+                        </figcaption>
+                    </figure>
+                    <div class="fav">
+                        <i class="far fa-heart fa-lg"></i>
+                    </div>
+                    <div class="text-center pt-4">
+                        <h5>كبسة فراخ </h5>
+                        <span class="badge bg-warning text-dark">
+                            <i class="fas fa-star"></i>
+                            الاعلى تقييم
+                        </span>
+
+                        <div class="d-flex justify-content-between pt-4">
+                            <button class="btn " data-bs-toggle="modal"
+                                data-bs-target="#productDiscountModal">
+                                + أضف الي العربة</button>
+                            <div>
+                                <span class="discount"> 300 ج . م</span>
+                                <span> 100 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <div class="tab-pane fade show " id="pills-discount" role="tabpanel" aria-labelledby="pills-discount-tab">
+            <div class="row mx-0">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <figure class="plate-img m-0">
+                            <img src="SiteAssets/images/plate1.png" alt="">
+                            <figcaption class="offers-badge">
+                                خصم <span> 10 %</span>
+                            </figcaption>
+                        </figure>
+                        <div class="fav">
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn " data-bs-toggle="modal" data-bs-target="#productDiscountModal">
+                                    + أضف الي العربة</button>
+                                <div>
+                                    <span class="discount"> 300 ج . م</span>
+                                    <span> 100 ج . م</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row mx-0">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <a href="#">
+                            <figure class="plate-img m-0">
+                                <img src="SiteAssets/images/plate1.png" alt="">
+                            </figure>
+                        </a>
+                        <div class="fav">
+
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    + أضف الي العربة</button>
+                                <span> 300 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <a href="#">
+                            <figure class="plate-img m-0">
+                                <img src="SiteAssets/images/offer-2.png" alt="">
+                            </figure>
+                        </a>
+                        <div class="fav">
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    + أضف الي العربة</button>
+                                <span> 300 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <a href="#">
+                            <figure class="plate-img m-0">
+                                <img src="SiteAssets/images/offer-3.png" alt="">
+                            </figure>
+                        </a>
+                        <div class="fav">
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    + أضف الي العربة</button>
+                                <span> 300 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="row mx-0">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <a href="#">
+                            <figure class="plate-img m-0">
+                                <img src="SiteAssets/images/plate1.png" alt="">
+                            </figure>
+                        </a>
+                        <div class="fav">
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    + أضف الي العربة</button>
+                                <span> 300 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="row mx-0">
+                <div class="col-md-4 mb-4 plate " data-aos="zoom-in">
+                    <a href="#">
+                        <figure class="plate-img m-0">
+                            <img src="SiteAssets/images/offer-2.png" alt="">
+                        </figure>
+                    </a>
+                    <div class="fav">
+                        <a href=""><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="text-center pt-4">
+                        <h5>برياني فراخ </h5>
+                        <span class="badge bg-warning text-dark">
+                            <i class="fas fa-star"></i>
+                            الاعلى تقييم
+                        </span>
+
+                        <div class="d-flex justify-content-between pt-4">
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                + أضف الي العربة</button>
+                            <span> 300 ج . م</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-salad" role="tabpanel" aria-labelledby="pills-salad-tab">
+            <div class="row mx-0">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <a href="#">
+                            <figure class="plate-img m-0">
+                                <img src="SiteAssets/images/plate1.png" alt="">
+                            </figure>
+                        </a>
+                        <div class="fav">
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    + أضف الي العربة</button>
+                                <span> 300 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-soda" role="tabpanel" aria-labelledby="pills-soda-tab">
+            <div class="row mx-0">
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="plate">
+                        <a href="#">
+                            <figure class="plate-img m-0">
+                                <img src="SiteAssets/images/plate1.png" alt="">
+                            </figure>
+                        </a>
+                        <div class="fav">
+                            <a href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <div class="text-center pt-4">
+                            <h5>كبسة فراخ </h5>
+                            <span class="badge bg-warning text-dark">
+                                <i class="fas fa-star"></i>
+                                الاعلى تقييم
+                            </span>
+
+                            <div class="d-flex justify-content-between pt-4">
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal">
+                                    + أضف الي العربة</button>
+                                <span> 300 ج . م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

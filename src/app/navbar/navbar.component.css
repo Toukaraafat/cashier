@@ -2,16 +2,7 @@
     box-shadow: -10px 4px 12px 0 rgba(0, 0, 0, 0.08);
 
 }
-.input-wrapper {
-    position: relative;
-    display: inline-block;
-}
 
-.input-wrapper input {
-    padding-right: 1rem;
-    border: none;
-    outline: none;
-}
 .user{
     display: flex;
     justify-content: center;
@@ -22,7 +13,4 @@
 }
 .user-info{
     margin-right: 1rem;
-}
-.nav-pills .nav-link{
-    
 }
