@@ -1,35 +1,49 @@
 import { Component } from '@angular/core';
 import { NgxCountriesDropdownModule } from 'ngx-countries-dropdown';
+import { CommonModule } from '@angular/common';
 import { IConfig } from 'ngx-countries-dropdown'; // Import the IConfig interface
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
   standalone:true,
-  imports: [NgxCountriesDropdownModule],
+  imports: [NgxCountriesDropdownModule,CommonModule,FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  title = 'Country Dropdown Example';
+  selectedCountry: any;
+  dropdownOpen = false;
 
-  // Configurations for the dropdown
-  selectedCountryConfig: IConfig = {
-    hideCode: true,
-    hideName: true
-  };
-  countryListConfig = {
-    hideCode: true
-  };
-  selectedCountry: any = null; // Default selected country
+  // Add flag URLs for each country
+  countryList = [
+    { code: '+02', flag: 'https://flagcdn.com/w40/eg.png' }, 
+    { code: '+965', flag: 'https://flagcdn.com/16x12/kw.png' },
+    {  code: 'GB', flag: 'https://flagcdn.com/w40/gb.png' }, 
+
+  ];
+
   ngOnInit() {
-    // Set "Option 1" as the default selected country
-    this.selectedCountry = {
-      name: 'Option 1', // Replace with actual country name
-      code: 'US'        // Replace with actual country code
-    };
+    if (this.countryList.length > 0) {
+      this.selectedCountry = this.countryList[0]; 
+    }
   }
 
-  // Event handler for country change
-  onCountryChange(country: any) {
-    console.log('Selected Country:', country);
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  selectCountry(country: any) {
+    this.selectedCountry = country;
+    this.dropdownOpen = false;
+    console.log("Selected country:", this.selectedCountry);
+  }
+   
+  // password eye 
+  password: string = ''; 
+  isPasswordVisible: boolean = false;
+
+  togglePasswordVisibility() {
+    this.isPasswordVisible = !this.isPasswordVisible;
   }
 }
+

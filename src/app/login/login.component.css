@@ -133,7 +133,7 @@ a:hover {
 }
 
 .forget-pass .login-background img {
-    max-height: 650px;
+    max-height: 550px;
     width: 100%;
     object-fit: contain;
 }
@@ -172,7 +172,61 @@ a:hover {
     text-overflow: ellipsis;
     overflow: hidden;
     cursor: pointer;
-    display: flex
-;
+    display: flex;
     align-items: center;
 }
+
+.custom-dropdown {
+    border: 1px solid #dfdfdf;
+    border-radius: 10px !important;
+    padding: 8px;
+    /* width: 7rem; */ 
+    margin-right: 8px;
+}
+.dropdown-list li:hover {
+    background: #f0f0f0;
+  }
+  .flag-icon,   .flag-icon[_ngcontent-ng-c3690399966] {
+    width: 25px;
+    height: 15px;
+        margin-inline: 4px;
+  }
+   .input-group {
+    position: relative;
+  }
+
+  .dropdown-list[_ngcontent-ng-c3720490783]  {
+    position: absolute;
+    top: 104%;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    width: 7rem;
+    left: 0px;
+    border-radius: 10px;
+}
+  .dropdown-list li {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-list li:hover {
+    background: #f0f0f0;
+  }
+    
+  .password-toggle-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;display: block;
+  }
