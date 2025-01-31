@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
+
 // import {LoginComponent} from "./login/login.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,CommonModule,NavbarComponent,SidebarComponent],
+  imports: [RouterOutlet,HomeComponent,CommonModule,NavbarComponent,SidebarComponent,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
