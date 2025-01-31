@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { TablesComponent } from './tables/tables.component';
 import { PillsComponent } from './pills/pills.component';
+import { DeliveryDetailsComponent } from './delivery-details/delivery-details.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, 
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: '', component: NavbarComponent }, 
   { path: 'tables', component: TablesComponent },    
   { path: 'pills', component: PillsComponent },    
+  { path: 'delivery-details', component: DeliveryDetailsComponent  },  
   { path: '**', redirectTo: 'login' },         
 ]

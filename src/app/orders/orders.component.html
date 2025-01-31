@@ -1,1 +1,1160 @@
-<p>orders works</p>
+<div class="requests p-3">
+    <h4>الطلبات</h4>
+    
+    <ul class="nav nav-requests mb-4 px-0" id="requests-tab21" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link sub active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+                type="button" role="tab" aria-controls="pills-all" aria-selected="true">
+                <span> الكل </span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-pending-tab" data-bs-toggle="pill" data-bs-target="#pills-pending"
+                type="button" role="tab" aria-controls="pills-pending" aria-selected="false">
+                <span> قيد التنفيذ</span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-onhold-tab" data-bs-toggle="pill" data-bs-target="#pills-onhold"
+                type="button" role="tab" aria-controls="pills-onhold" aria-selected="false">
+                <span> معلقة </span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-ready-tab" data-bs-toggle="pill" data-bs-target="#pills-ready"
+                type="button" role="tab" aria-controls="pills-ready" aria-selected="false">
+                <span> جاهزة للتقديم </span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-completed-tab" data-bs-toggle="pill" data-bs-target="#pills-completed"
+                type="button" role="tab" aria-controls="pills-completed" aria-selected="false">
+                <span> مكتملة </span>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link sub" id="pills-canceled-tab" data-bs-toggle="pill" data-bs-target="#pills-canceled"
+                type="button" role="tab" aria-controls="pills-canceled" aria-selected="false">
+                <span> ملغية </span>
+            </button>
+        </li>
+    </ul>
+    <div class="input-wrapper form-control ">
+        <i class="fa-solid fa-magnifying-glass text-muted"></i>
+        <input type="text" placeholder="ابحث...">
+    </div>
+    <div class="tab-content second-sub py-3" id="pills-tabContent6">
+        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+            <div class="row m-0">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            <h5><span class="badge bg-green text-dark"><i class="fas fa-concierge-bell text-success"></i> جاهزة للتقديم </span></h5>
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn bg-green text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main">وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightyellow text-dark"><i class="fas fa-chess-queen text-warning"></i> قيد التنفيذ  </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightyellow text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> دليفرى </span></h5>
+                            <h5> <span class="badge bg-lightgray text-dark"><i class="fas fa-check-circle text-success"></i> مكتملة   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightgray text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightred text-dark"><i class="fas fa-times-circle text-danger"></i> ملغيه   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightred text-danger fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn  text-white mb-2 fs-6 w-100 mt-auto">تنفيذ الطلب</button>
+                        <button type="submit" class="btn bg-lightgray text-dark mb-2 fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-pending" role="tabpanel" aria-labelledby="pills-pending-tab">
+            <div class="row m-0">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main">وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightyellow text-dark"><i class="fas fa-chess-queen text-warning"></i> قيد التنفيذ  </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightyellow text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main">وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightyellow text-dark"><i class="fas fa-chess-queen text-warning"></i> قيد التنفيذ  </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightyellow text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main">وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightyellow text-dark"><i class="fas fa-chess-queen text-warning"></i> قيد التنفيذ  </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightyellow text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main">وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightyellow text-dark"><i class="fas fa-chess-queen text-warning"></i> قيد التنفيذ  </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightyellow text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-onhold" role="tabpanel" aria-labelledby="pills-onhold-tab">
+            <div class="row m-0">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn  text-white mb-2 fs-6 w-100 mt-auto">تنفيذ الطلب</button>
+                        <button type="submit" class="btn bg-lightgray text-dark mb-2 fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn  text-white mb-2 fs-6 w-100 mt-auto">تنفيذ الطلب</button>
+                        <button type="submit" class="btn bg-lightgray text-dark mb-2 fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn  text-white mb-2 fs-6 w-100 mt-auto">تنفيذ الطلب</button>
+                        <button type="submit" class="btn bg-lightgray text-dark mb-2 fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn  text-white mb-2 fs-6 w-100 mt-auto">تنفيذ الطلب</button>
+                        <button type="submit" class="btn bg-lightgray text-dark mb-2 fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5><span class="badge bg-main">فى المطعم</span></h5>
+                            
+                        </div>
+                
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                            <h6>طاولة</h6>
+                            <h6>1</h6>
+                        </div>
+                
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184</h6>
+                        </div>
+                
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                
+                        <button type="submit" class="btn  text-white mb-2 fs-6 w-100 mt-auto">تنفيذ الطلب</button>
+                        <button type="submit" class="btn bg-lightgray text-dark mb-2 fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-ready" role="tabpanel" aria-labelledby="pills-ready-tab">
+            <div class="row m-0">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                           <h5> <span class="badge bg-main">فى المطعم</span></h5>
+                           <h5> <span class="badge bg-green text-dark"><i class="fas fa-concierge-bell text-success"></i>
+  جاهزة للتقديم </span></h5> </div>
+    
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                         <h6>طاولة</h6>
+                         <h6>1</h6>
+                        </div>
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                          <h6>رقم الطلب</h6>
+                          <h6 class="text-muted">#3236184 </h6>
+                        </div>
+
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small> 7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small> </h6>
+                          </div>
+                          <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small>عدد العناصر  </small></h6>
+                            <h6 class="text-muted"><small>12 </small> </h6>
+                          </div>
+                         <div class="order-items border-bottom border-top py-1 mb-1">
+                            <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">1 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                              <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">2 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                         </div>
+                         <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">  المجموع الكلى</h5>
+                            <h5 class="fw-bold"> <span> 1256</span> ج.م</h5>
+                          </div>
+                          <button type="submit" class="btn bg-green text-dark fs-6  w-100">تفاصيل الطلب </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                           <h5> <span class="badge bg-main">فى المطعم</span></h5>
+                           <h5> <span class="badge bg-green text-dark"><i class="fas fa-concierge-bell text-success"></i>
+  جاهزة للتقديم </span></h5> </div>
+    
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                         <h6>طاولة</h6>
+                         <h6>1</h6>
+                        </div>
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                          <h6>رقم الطلب</h6>
+                          <h6 class="text-muted">#3236184 </h6>
+                        </div>
+
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small> 7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small> </h6>
+                          </div>
+                          <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small>عدد العناصر  </small></h6>
+                            <h6 class="text-muted"><small>12 </small> </h6>
+                          </div>
+                         <div class="order-items border-bottom border-top py-1 mb-1">
+                            <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">1 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                              <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">2 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                         </div>
+                         <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">  المجموع الكلى</h5>
+                            <h5 class="fw-bold"> <span> 1256</span> ج.م</h5>
+                          </div>
+                          <button type="submit" class="btn bg-green text-dark fs-6  w-100">تفاصيل الطلب </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                           <h5> <span class="badge bg-main">فى المطعم</span></h5>
+                           <h5> <span class="badge bg-green text-dark"><i class="fas fa-concierge-bell text-success"></i>
+  جاهزة للتقديم </span></h5> </div>
+    
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                         <h6>طاولة</h6>
+                         <h6>1</h6>
+                        </div>
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                          <h6>رقم الطلب</h6>
+                          <h6 class="text-muted">#3236184 </h6>
+                        </div>
+
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small> 7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small> </h6>
+                          </div>
+                          <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small>عدد العناصر  </small></h6>
+                            <h6 class="text-muted"><small>12 </small> </h6>
+                          </div>
+                         <div class="order-items border-bottom border-top py-1 mb-1">
+                            <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">1 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                              <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">2 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                         </div>
+                         <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">  المجموع الكلى</h5>
+                            <h5 class="fw-bold"> <span> 1256</span> ج.م</h5>
+                          </div>
+                          <button type="submit" class="btn bg-green text-dark fs-6  w-100">تفاصيل الطلب </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                           <h5> <span class="badge bg-main">فى المطعم</span></h5>
+                           <h5> <span class="badge bg-green text-dark"><i class="fas fa-concierge-bell text-success"></i>
+  جاهزة للتقديم </span></h5> </div>
+    
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                         <h6>طاولة</h6>
+                         <h6>1</h6>
+                        </div>
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                          <h6>رقم الطلب</h6>
+                          <h6 class="text-muted">#3236184 </h6>
+                        </div>
+
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small> 7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small> </h6>
+                          </div>
+                          <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small>عدد العناصر  </small></h6>
+                            <h6 class="text-muted"><small>12 </small> </h6>
+                          </div>
+                         <div class="order-items border-bottom border-top py-1 mb-1">
+                            <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">1 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                              <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">2 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                         </div>
+                         <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">  المجموع الكلى</h5>
+                            <h5 class="fw-bold"> <span> 1256</span> ج.م</h5>
+                          </div>
+                          <button type="submit" class="btn bg-green text-dark fs-6  w-100">تفاصيل الطلب </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                           <h5> <span class="badge bg-main">فى المطعم</span></h5>
+                           <h5> <span class="badge bg-green text-dark"><i class="fas fa-concierge-bell text-success"></i>
+  جاهزة للتقديم </span></h5> </div>
+    
+                        <div class="table-number bg-lightyellow d-flex justify-content-between mb-1 px-2 rounded-1">
+                         <h6>طاولة</h6>
+                         <h6>1</h6>
+                        </div>
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                          <h6>رقم الطلب</h6>
+                          <h6 class="text-muted">#3236184 </h6>
+                        </div>
+
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small> 7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small> </h6>
+                          </div>
+                          <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6  class="text-muted"> <small>عدد العناصر  </small></h6>
+                            <h6 class="text-muted"><small>12 </small> </h6>
+                          </div>
+                         <div class="order-items border-bottom border-top py-1 mb-1">
+                            <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">1 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                              <div class=" d-flex justify-content-between px-1 mb-1 ">
+                                <h6> <span class="badge bg-lightgray text-dark ">2 </span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                              </div>
+                         </div>
+                         <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">  المجموع الكلى</h5>
+                            <h5 class="fw-bold"> <span> 1256</span> ج.م</h5>
+                          </div>
+                          <button type="submit" class="btn bg-green text-dark fs-6  w-100">تفاصيل الطلب </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-completed" role="tabpanel" aria-labelledby="pills-completed-tab">
+            <div class="row m-0">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> دليفرى </span></h5>
+                            <h5> <span class="badge bg-lightgray text-dark"><i class="fas fa-check-circle text-success"></i> مكتملة   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightgray text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> دليفرى </span></h5>
+                            <h5> <span class="badge bg-lightgray text-dark"><i class="fas fa-check-circle text-success"></i> مكتملة   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightgray text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> دليفرى </span></h5>
+                            <h5> <span class="badge bg-lightgray text-dark"><i class="fas fa-check-circle text-success"></i> مكتملة   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightgray text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> دليفرى </span></h5>
+                            <h5> <span class="badge bg-lightgray text-dark"><i class="fas fa-check-circle text-success"></i> مكتملة   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightgray text-dark fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-canceled" role="tabpanel" aria-labelledby="pills-canceled-tab">
+            <div class="row m-0">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightred text-dark"><i class="fas fa-times-circle text-danger"></i> ملغيه   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightred text-danger fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-2 d-flex flex-column h-100">
+                        <div class="status d-flex flex-wrap justify-content-between mb-1">
+                            <h5> <span class="badge bg-main"> وجبات جاهزة </span></h5>
+                            <h5> <span class="badge bg-lightred text-dark"><i class="fas fa-times-circle text-danger"></i> ملغيه   </span></h5>
+                        </div>
+                    
+                        <div class="order-number d-flex justify-content-between px-1 mb-1">
+                            <h6>رقم الطلب</h6>
+                            <h6 class="text-muted">#3236184 </h6>
+                        </div>
+                    
+                        <div class="date d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>7 يناير</small></h6>
+                            <h6 class="text-muted"><small>12 pm</small></h6>
+                        </div>
+                    
+                        <div class="num-items d-flex justify-content-between px-1 mb-1">
+                            <h6 class="text-muted"><small>عدد العناصر</small></h6>
+                            <h6 class="text-muted"><small>12</small></h6>
+                        </div>
+                    
+                        <div class="order-items border-bottom border-top py-1 mb-1 flex-grow-1">
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">1</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                            <div class="d-flex justify-content-between px-1 mb-1">
+                                <h6><span class="badge bg-lightgray text-dark">2</span> x <span>برياني لحم نعيمي</span></h6>
+                                <h6><span>670</span> ج.م</h6>
+                            </div>
+                        </div>
+                    
+                        <div class="total-price d-flex justify-content-between px-1 mb-1">
+                            <h5 class="fw-bold">المجموع الكلى</h5>
+                            <h5 class="fw-bold"><span>1256</span> ج.م</h5>
+                        </div>
+                    
+                        <button type="submit" class="btn bg-lightred text-danger fs-6 w-100 mt-auto">تفاصيل الطلب</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
