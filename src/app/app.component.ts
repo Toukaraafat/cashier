@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 
 // import {LoginComponent} from "./login/login.component";
 
@@ -13,7 +15,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,CommonModule,NavbarComponent,SidebarComponent,RouterModule],
+  imports: [RouterOutlet,HomeComponent,CommonModule,NavbarComponent,SidebarComponent,RouterModule,MainLayoutComponent,MainLayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -24,7 +24,6 @@ export class AuthService {
 
   // Set the username and emit the change to all subscribers
   setUsername(username: string): void {
-    console.log('Setting username:', username); // Log when the username is being set
     this.usernameSubject.next(username); // Update the BehaviorSubject with the new username
   }
 
@@ -33,8 +32,5 @@ export class AuthService {
     this.usernameSubject.next(''); // Reset the username to an empty string
   }
 
-  // Optional: You could add a method to check if the user is logged in by validating the username or token
-  isLoggedIn(): boolean {
-    return this.usernameSubject.getValue() !== ''; // Returns true if the username is not empty
-  }
+ 
 }

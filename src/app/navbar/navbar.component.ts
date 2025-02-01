@@ -13,7 +13,6 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.username$.subscribe((username) => {
-      console.log('Username from service:', username);  // Log the username to the console
       this.username = username;
     });
   }

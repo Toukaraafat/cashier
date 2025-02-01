@@ -52,19 +52,11 @@ export class LoginComponent {
   }
 
   onLogin() {
-    // Validate input fields
-    if (!this.loginData.username || !this.loginData.pass) {
-      this.errorMessage = 'Please enter both username and password';
-      return;
-    }
 
     // Call the login method from AuthService
     this.authService.login(this.loginData.username, this.loginData.pass).subscribe({
       next: (response) => {
         console.log('Login Successful:', response);
-
-        // Store the token (optional)
-        localStorage.setItem('token', response.token);
 
         // Update the username in AuthService
         this.authService.setUsername(this.loginData.username);  // Set the username in the service
