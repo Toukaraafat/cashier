@@ -10,15 +10,13 @@ import { DeliveryDetailsComponent } from './delivery-details/delivery-details.co
 import { OrderDetailsComponent } from './order-details/order-details.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
-  { path: 'login', component: LoginComponent },       
-  { path: '', component: HomeComponent },          
-  { path: 'orders', component: OrdersComponent },      
-  { path: '', component: NavbarComponent }, 
-  { path: 'tables', component: TablesComponent },    
-  { path: 'pills', component: PillsComponent },    
-  { path: 'delivery-details', component: DeliveryDetailsComponent  }, 
-  { path: 'order-details', component: OrderDetailsComponent  },  
- 
-  { path: '**', redirectTo: 'login' },         
-]
+  { path: '', redirectTo: 'home', pathMatch: 'full' },  // Default redirect to home
+  { path: 'login', component: LoginComponent },        // Login route
+  { path: 'home', component: HomeComponent },          // Home route
+  { path: 'orders', component: OrdersComponent },      // Orders route
+  { path: 'tables', component: TablesComponent },      // Tables route
+  { path: 'pills', component: PillsComponent },        // Pills route
+  { path: 'delivery-details', component: DeliveryDetailsComponent },  // Delivery details route
+  { path: 'order-details', component: OrderDetailsComponent },  // Order details route
+  { path: '**', redirectTo: 'login' },                 // Catch-all route for undefined paths
+];
