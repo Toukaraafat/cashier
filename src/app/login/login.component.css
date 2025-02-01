@@ -230,3 +230,20 @@ a:hover {
     border: none;
     cursor: pointer;display: block;
   }
+ @media (max-width:1600px) {
+    .forget-pass[_ngcontent-ng-c1763819975] .login-background[_ngcontent-ng-c1763819975] img[_ngcontent-ng-c1763819975] {
+        max-height: 465px;
+    }  
+ }
+ @media (max-width:1440px) {
+    .forget-pass[_ngcontent-ng-c1763819975] .login-background[_ngcontent-ng-c1763819975] img[_ngcontent-ng-c1763819975] {
+        max-height: 400px;
+    }  
+    .forget-pass[_ngcontent-ng-c1763819975] .meat[_ngcontent-ng-c1763819975] {
+        position: absolute;
+        top: 11px;
+        right: 0px;
+        width: 8rem;
+    }
+    
+ }
