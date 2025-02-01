@@ -1,0 +1,18 @@
+<div class="plate">
+    <figure class="plate-img m-0">
+        <img src="{{product.thumbnail}}" alt />
+    </figure>
+    <div class="text-center pt-3">
+        <h5 class="mb-0">{{product.title}}</h5>
+        <div class="py-3">
+            <span class="discount"> {{product.discountPercentage}} ج . م</span>
+            <span>{{product.price}}ج . م</span>
+        </div>
+        <button class="btn">
+            + إضافة
+        </button>
+        <button class="btn" (click)="deleteProduct(product.id)">
+             ازالة
+        </button>
+    </div>
+</div>

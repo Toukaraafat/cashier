@@ -1,0 +1,21 @@
+.plate {
+    box-shadow: 4px 4px 12px 0 #00000033;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+}
+
+
+.plate-img img {
+    height: 145px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.discount {
+    text-decoration: line-through;
+    color: #FE0000;
+    margin-left: 0.5rem;
+}
+.plate span{
+    font-weight: bold;
+}

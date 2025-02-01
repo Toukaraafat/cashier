@@ -1,0 +1,38 @@
+.nav-item .nav-link{
+    background-color: #fff;
+    box-shadow: 4px 4px 12px 0 #00000033;
+
+}
+
+.nav-item:nth-child(1) .nav-link {
+    background-color: #fe0000;
+    color: #fff!important;
+}
+
+.category-button img {
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-pills .nav-link {
+    font-size: 1.25rem;
+    min-width: 135px;
+    height: 125px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fe0000;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-right: -50%;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color: #000;
+}
