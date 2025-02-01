@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-orders',
-  imports: [],
+  standalone: true,
   templateUrl: './orders.component.html',
-  styleUrl: './orders.component.css'
+  styleUrls: ['./orders.component.scss'],
+  imports: [RouterLink, RouterLinkActive]  
 })
-export class OrdersComponent {
-
-}
+export class OrdersComponent {}

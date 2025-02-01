@@ -1,38 +1,54 @@
 <section class="forget-pass m-lg-0 m-sm-5">
   <div class="container">
     <div class="body-images">
-      <img src="assets/images/meat-bg.png" class="position-absolute meat ">
-
-      <img src="assets/images/spoon-bg.png" class="position-absolute spoon ">
+      <img src="assets/images/meat-bg.png" class="position-absolute meat">
+      <img src="assets/images/spoon-bg.png" class="position-absolute spoon">
     </div>
 
     <div class="row">
-      <div class="col-12 d-flex justify-content-center  mt-5 mb-4">
+      <div class="col-12 d-flex justify-content-center mt-5 mb-4">
         <img src="assets/images/logo-with-white-bg.png" alt="Placeholder Logo" height="110">
       </div>
 
-      <div class="col-md-7 right-side bg-white p-md-5 ">
+      <div class="col-md-7 right-side bg-white p-md-5">
         <h1 class="main-color fw-bold py-4"> مرحبا بك! </h1>
         <h5 class="text-dark pb-3">سجل دخولك بكل سهولة</h5>
 
-
+        <!-- Phone Input -->
         <div class="input-group position-relative mb-3">
-          <input type="text" class="form-control " id="phoneInput" placeholder="ادخل رقم الهاتف ,مثال01029063398">
-          <div class="country-dropdown-container">
-            <lib-country-list [selectedCountryConfig]="selectedCountryConfig" [countryListConfig]="countryListConfig"
-              (onCountryChange)="onCountryChange($event)">
-            </lib-country-list>
+          <input type="text" class="form-control" id="phoneInput" placeholder="ادخل رقم الهاتف ,مثال 01029063398"
+            [(ngModel)]="loginData.username">
+          
+          <div class="custom-dropdown dropdown">
+            <div class="selected-option dropdown-toggle text-muted" data-bs-toggle="dropdown">
+              {{ selectedCountry.code }}
+              <img [src]="selectedCountry.flag" class="flag-icon" />
+            </div>  
+            <ul class="dropdown-list dropdown-menu">
+              <li *ngFor="let country of countryList" (click)="selectCountry(country)" class="d-flex justify-content-between text-muted">
+                {{ country.code }} 
+                <img [src]="country.flag" class="flag-icon" />
+              </li>
+            </ul> 
           </div>
-
         </div>
 
-        <div class="input-group position-relative  py-3">
-          <input type="password" class="form-control" id="passwordInput" placeholder="ادخل كلمة المرور الجديدة">
-          <!-- <button class="input-group-eye position-absolute" type="button" id="togglePassword">
-            <i class="fas fa-eye" id="eyeIcon"></i>
-          </button> -->
+        <!-- Password Input -->
+        <div class="input-group position-relative mb-3">
+          <input 
+            [type]="isPasswordVisible ? 'text' : 'password'" 
+            class="form-control" 
+            id="passwordInput" 
+            placeholder="ادخل كلمة المرور"
+            [(ngModel)]="loginData.pass"
+          />
+          <button type="button" class="password-toggle-btn" (click)="togglePasswordVisibility()">
+            <i class="fa" [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+          </button>
         </div>
-        <button type="submit" class="btn  fs-5  w-100">تسجيل الدخول</button>
+
+        <!-- Submit Button with RouterLink -->
+        <button class="btn fs-5 w-100" (click)="onLogin()">تسجيل الدخول</button>
       </div>
 
       <div class="col-md-5 login-background d-none d-md-block">

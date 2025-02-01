@@ -1,35 +1,77 @@
 import { Component } from '@angular/core';
 import { NgxCountriesDropdownModule } from 'ngx-countries-dropdown';
-import { IConfig } from 'ngx-countries-dropdown'; // Import the IConfig interface
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
-  standalone:true,
-  imports: [NgxCountriesDropdownModule],
+  standalone: true,
+  imports: [NgxCountriesDropdownModule, CommonModule, FormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  title = 'Country Dropdown Example';
+  selectedCountry: any;
+  dropdownOpen = false;
+  loginData = {
+    username: '',
+    pass: ''
+  };
+  errorMessage: string = '';
 
-  // Configurations for the dropdown
-  selectedCountryConfig: IConfig = {
-    hideCode: true,
-    hideName: true
-  };
-  countryListConfig = {
-    hideCode: true
-  };
-  selectedCountry: any = null; // Default selected country
+  countryList = [
+    { code: '+02', flag: 'https://flagcdn.com/w40/eg.png' },
+    { code: '+965', flag: 'https://flagcdn.com/16x12/kw.png' },
+    { code: '+44', flag: 'https://flagcdn.com/w40/gb.png' },
+  ];
+
+  isPasswordVisible: boolean = false;
+
+  constructor(private authService: AuthService, private router: Router) {}
+
   ngOnInit() {
-    // Set "Option 1" as the default selected country
-    this.selectedCountry = {
-      name: 'Option 1', // Replace with actual country name
-      code: 'US'        // Replace with actual country code
-    };
+    if (this.countryList.length > 0) {
+      this.selectedCountry = this.countryList[0];
+    }
   }
 
-  // Event handler for country change
-  onCountryChange(country: any) {
-    console.log('Selected Country:', country);
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  selectCountry(country: any) {
+    this.selectedCountry = country;
+    this.dropdownOpen = false;
+    console.log('Selected country:', this.selectedCountry);
+  }
+
+  togglePasswordVisibility() {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
+  onLogin() {
+
+    // Call the login method from AuthService
+    this.authService.login(this.loginData.username, this.loginData.pass).subscribe({
+      next: (response) => {
+        console.log('Login Successful:', response);
+
+        // Update the username in AuthService
+        this.authService.setUsername(this.loginData.username);  // Set the username in the service
+
+        // Show welcome alert with username
+        alert('Welcome ' + this.loginData.username);
+
+        // Redirect to the home page
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        console.error('Login Failed:', error);
+        this.errorMessage = 'Invalid username or password';
+        alert('Invalid username or password');  // Show alert on failed login
+      },
+    });
   }
 }
