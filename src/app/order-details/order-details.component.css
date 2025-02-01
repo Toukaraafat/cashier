@@ -6,5 +6,5 @@
 .accordion-button:focus {
     z-index: 3;
     outline: 0;
-    box-shadow: #fff !important;
+    box-shadow: none !important;
 }
