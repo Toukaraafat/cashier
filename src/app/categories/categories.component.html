@@ -10,114 +10,39 @@
     <i class="fa-solid fa-magnifying-glass text-muted"></i>
     <input type="text" placeholder="ابحث..." />
 </div>
-<div class="categories py-4">
-    <ul class="nav nav-pills mb-3 px-0 align-items-center justify-content-between" id="pills-tab" role="tablist">
+<div class="categories py-3">
+    <ul class="nav nav-pills mb-3 px-0 align-items-center" id="pills-tab" role="tablist">
+        @for (category of categories; track $index) {
         <li class="nav-item mb-2" role="presentation">
-            <button class="nav-link active" id="pills-offers-tab" data-bs-toggle="pill" data-bs-target="#pills-offers"
-                type="button" role="tab" aria-controls="pills-offers" aria-selected="true">
+            <button class="nav-link" [ngClass]="{'active': selectedCategory === category}"
+                    (click)="onCategorySelect(category)" id="pills-{{category.name}}-tab" data-bs-toggle="pill" 
+                    [attr.data-bs-target]="'#pills-' + category.name" type="button" role="tab" 
+                    [attr.aria-controls]="'pills-' + category.name" [attr.aria-selected]="selectedCategory === category">
                 <div class="category-button">
-                    <img src="assets/images/offers.png" alt class="offer-img" />
-                    <p class="mb-0">العروض</p>
+                    <img [src]="category.image_path" alt="" class="category-img" />
+                    <p class="mb-0">{{ category.name }}</p>
                 </div>
             </button>
         </li>
-        <li class="nav-item mb-2" role="presentation">
-            <button class="nav-link" id="pills-main-tab" data-bs-toggle="pill" data-bs-target="#pills-main"
-                type="button" role="tab" aria-controls="pills-main" aria-selected="true">
-                <div class="category-button">
-                    <img src="assets/images/intro-plate.png" alt />
-                    <p class="mb-0">اطباق رئيسية</p>
-                </div>
-            </button>
-        </li>
-        <li class="nav-item mb-2" role="presentation">
-            <button class="nav-link" id="pills-sides-tab" data-bs-toggle="pill" data-bs-target="#pills-sides"
-                type="button" role="tab" aria-controls="pills-sides" aria-selected="false">
-                <div class="category-button">
-                    <img src="assets/images/plate2.png" alt />
-                    <p class="mb-0">اطباق جانبية</p>
-                </div>
-            </button>
-        </li>
-        <li class="nav-item mb-2" role="presentation">
-            <button class="nav-link" id="pills-appetizers-tab" data-bs-toggle="pill" data-bs-target="#pills-appetizers"
-                type="button" role="tab" aria-controls="pills-appetizers" aria-selected="false">
-                <div class="category-button">
-                    <img src="assets/images/plate3.png" alt />
-                    <p class="mb-0">مقبلات</p>
-                </div>
-            </button>
-        </li>
-        <li class="nav-item mb-2" role=" presentation">
-            <button class="nav-link" id="pills-soda-tab" data-bs-toggle="pill" data-bs-target="#pills-soda"
-                type="button" role="tab" aria-controls="pills-soda" aria-selected="false">
-                <div class="category-button">
-                    <img src="assets/images/plate5.png" alt />
-                    <p class="mb-0">مشروبات</p>
-                </div>
-            </button>
-        </li>
-        <li class="nav-item mb-2" role=" presentation">
-            <div class="icon">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-        </li>
+    }
     </ul>
+    
     <div class="tab-content pt-4" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-offers" role="tabpanel" aria-labelledby="pills-offers-tab">
+        @for (category of categories; track $index) {
+        <div class="tab-pane fade" [ngClass]="{'show active': selectedCategory === category}"
+             [id]="'pills-' + category.name" role="tabpanel" [attr.aria-labelledby]="'pills-' + category.name + '-tab'">
             <div class="row mx-0">
-                @for (product of products; track $index) {
+                @for (product of selectedCategoryProducts; track product.id) {
                 <div class="col-md-4 mb-4">
-                 <app-product-card [product]="product" (sendToCategories)="recieveFromProduct($event)"></app-product-card>
+                    <app-product-card [product]="product" (sendToCategories)="recieveFromProduct($event)"></app-product-card>
                 </div>
-                }@empty {
-                    <p>there is no products</p>
-                }
+            }
+            @if (selectedCategoryProducts.length === 0) {
+                <p>No products available</p>
+            }
             </div>
         </div>
-        <div class="tab-pane fade" id="pills-main" role="tabpanel" aria-labelledby="pills-main-tab">
-            <div class="row mx-0">
-                @for (product of products; track $index) {
-                <div class="col-md-4 mb-4">
-                 <app-product-card [product]="product" (sendToCategories)="recieveFromProduct($event)"></app-product-card>
-                </div>
-                }@empty {
-                    <p>there is no products</p>
-                }
-            </div>
-        </div>
-        <div class="tab-pane fade" id="pills-sides" role="tabpanel" aria-labelledby="pills-sides-tab">
-            <div class="row mx-0">
-                @for (product of products; track $index) {
-                <div class="col-md-4 mb-4">
-                 <app-product-card [product]="product" (sendToCategories)="recieveFromProduct($event)"></app-product-card>
-                </div>
-                }@empty {
-                    <p>there is no products</p>
-                }
-            </div>
-        </div>
-        <div class="tab-pane fade" id="pills-appetizers" role="tabpanel" aria-labelledby="pills-appetizers-tab">
-            <div class="row mx-0">
-                @for (product of products; track $index) {
-                <div class="col-md-4 mb-4">
-                 <app-product-card [product]="product" (sendToCategories)="recieveFromProduct($event)"></app-product-card>
-                </div>
-                }@empty {
-                    <p>there is no products</p>
-                }
-            </div>
-        </div>
-        <div class="tab-pane fade" id="pills-soda" role="tabpanel" aria-labelledby="pills-soda-tab">
-            <div class="row mx-0">
-                @for (product of products; track $index) {
-                <div class="col-md-4 mb-4">
-                 <app-product-card [product]="product" (sendToCategories)="recieveFromProduct($event)"></app-product-card>
-                </div>
-                }@empty {
-                    <p>there is no products</p>
-                }
-            </div>
-        </div>
+    }
     </div>
+    
 </div>

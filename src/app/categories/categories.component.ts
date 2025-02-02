@@ -11,25 +11,53 @@ import { ProductsService } from '../services/products.service';
   styleUrl: './categories.component.css'
 })
 export class CategoriesComponent implements OnInit{
+  selectedCategory: any;
   constructor(private productsRequestService: ProductsService) {}
-  baseurl: any;
-  products :any ;
+  products :any ;  
+  categories: any[] = [];
+  selectedCategoryProducts: any[] = [];
   @Input() product: any;
 
   // ngOnInit(): void {
   //   this.baseurl = this.productsRequestService.getProducts().subscribe((response : any) => this.products = response);
   // }
-  ngOnInit() {
+  // ngOnInit() {
+  //   this.productsRequestService.getProducts().subscribe({
+  //     next: (data: any) => {
+  //       console.log('Products:', data.data.categories
+  //       );
+  //       this.products = data.data.categories;
+  //     },
+  //     error: (err) => console.error('Error fetching products:', err)
+  //   });    this.loadCategories();
+
+  // }
+
+
+  ngOnInit(): void {
+    this.loadCategories();
+  }
+
+  loadCategories(): void {
     this.productsRequestService.getProducts().subscribe({
-      next: (data: any) => {
-        // console.log('Products:', data);
-        this.products = data.products;
+      next: (data: any)  => {
+        if (data.status) {
+          this.categories = data.data.categories;
+          this.selectedCategoryProducts = this.categories[0]?.dishes || [];
+        }
       },
-      error: (err) => console.error('Error fetching products:', err)
-    });
+      error: (err)  => {
+        console.error('Error fetching categories:', err);
+      }
+   });
+  }
+
+  onCategorySelect(category: any): void {
+    this.selectedCategoryProducts = category.dishes || [];
   }
   recieveFromProduct(id: any) {
     // console.log("recieve")
     this.products = this.products.filter((product: { id: any; }) => product.id !== id)
   }
+
 }
