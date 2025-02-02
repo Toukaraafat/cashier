@@ -22,14 +22,14 @@ export class CategoriesComponent implements OnInit{
   ngOnInit() {
     this.productsRequestService.getProducts().subscribe({
       next: (data: any) => {
-        console.log('Products:', data);
+        // console.log('Products:', data);
         this.products = data.products;
       },
       error: (err) => console.error('Error fetching products:', err)
     });
   }
   recieveFromProduct(id: any) {
-    console.log("recieve")
+    // console.log("recieve")
     this.products = this.products.filter((product: { id: any; }) => product.id !== id)
   }
 }
