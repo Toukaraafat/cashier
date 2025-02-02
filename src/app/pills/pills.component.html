@@ -45,9 +45,11 @@
                         </p>
                     </div>
                     <div class="d-flex text-center mb-2">
-                        <p class="btn-static btn-static-main text-white w-100">
+                        <a class="btn-static btn-static-main text-white w-100" routerLink="/pill-details"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">
                             تفاصيل الفاتورة
-                        </p>
+                        </a>
                     </div>
                 </div>
             </div>
