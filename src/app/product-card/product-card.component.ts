@@ -11,7 +11,7 @@ export class ProductCardComponent {
   @Output() sendToCategories = new EventEmitter(); // bywsl value mn component l component
 
   deleteProduct(id: string) {
-    console.log(id)
+    // console.log(id)
     this.sendToCategories.emit(id) //method byakhod l value de todyha ll parent
   }
 }
