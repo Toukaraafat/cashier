@@ -1,36 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://dummyjson.com/auth/login';
-  
-  // Private BehaviorSubject to hold the current username value
-  private usernameSubject = new BehaviorSubject<string>(''); 
+  private apiUrl = 'https://erpsystem.testdomain100.online/api/login';
+  private countryApiUrl = 'https://erpsystem.testdomain100.online/api/countries';
 
-  // Observable to expose the username to other components
+  private usernameSubject = new BehaviorSubject<string>('');
   username$ = this.usernameSubject.asObservable();
 
   constructor(private http: HttpClient) {}
 
-  // Login method to authenticate user and return token
-  login(username: string, password: string): Observable<any> {
-    return this.http.post(this.apiUrl, { username, password });
+  // Fetch country codes dynamically
+  getCountries(): Observable<any> {
+    return this.http.get(this.countryApiUrl);
   }
 
-  // Set the username and emit the change to all subscribers
+  // Login method
+  login(country_code: string, email_or_phone: string, password: string): Observable<any> {
+    return this.http.post(this.apiUrl, { country_code, email_or_phone, password });
+  }
+
   setUsername(username: string): void {
-    this.usernameSubject.next(username); // Update the BehaviorSubject with the new username
+    this.usernameSubject.next(username);
   }
 
-  // Clear the username, typically when the user logs out
   clearUsername(): void {
-    this.usernameSubject.next(''); // Reset the username to an empty string
+    this.usernameSubject.next('');
   }
-
- 
 }

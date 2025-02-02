@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { NgxCountriesDropdownModule } from 'ngx-countries-dropdown';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
@@ -8,33 +7,38 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [NgxCountriesDropdownModule, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  selectedCountry: any;
+export class LoginComponent implements OnInit {
+  selectedCountry: any = null;
+  countryList: any[] = [];
   dropdownOpen = false;
-  loginData = {
-    username: '',
-    pass: ''
-  };
   errorMessage: string = '';
-
-  countryList = [
-    { code: '+02', flag: 'https://flagcdn.com/w40/eg.png' },
-    { code: '+965', flag: 'https://flagcdn.com/16x12/kw.png' },
-    { code: '+44', flag: 'https://flagcdn.com/w40/gb.png' },
-  ];
-
   isPasswordVisible: boolean = false;
+
+  loginData = {
+    country_code: '',
+    email_or_phone: '',
+    password: ''
+  };
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    if (this.countryList.length > 0) {
-      this.selectedCountry = this.countryList[0];
-    }
+    this.authService.getCountries().subscribe({
+      next: (data) => {
+        this.countryList = data; // Assuming API returns an array of countries with { code, flag }
+        if (this.countryList.length > 0) {
+          this.selectedCountry = this.countryList[0]; // Default selection
+          this.loginData.country_code = this.selectedCountry.code; // Set default country code
+        }
+      },
+      error: (error) => {
+        console.error('Error fetching countries:', error);
+      }
+    });
   }
 
   toggleDropdown() {
@@ -43,8 +47,8 @@ export class LoginComponent {
 
   selectCountry(country: any) {
     this.selectedCountry = country;
+    this.loginData.country_code = country.code;
     this.dropdownOpen = false;
-    console.log('Selected country:', this.selectedCountry);
   }
 
   togglePasswordVisibility() {
@@ -52,26 +56,18 @@ export class LoginComponent {
   }
 
   onLogin() {
-
-    // Call the login method from AuthService
-    this.authService.login(this.loginData.username, this.loginData.pass).subscribe({
+    this.authService.login(this.loginData.country_code, this.loginData.email_or_phone, this.loginData.password).subscribe({
       next: (response) => {
         console.log('Login Successful:', response);
-
-        // Update the username in AuthService
-        this.authService.setUsername(this.loginData.username);  // Set the username in the service
-
-        // Show welcome alert with username
-        alert('Welcome ' + this.loginData.username);
-
-        // Redirect to the home page
+        this.authService.setUsername(this.loginData.email_or_phone);
+        alert('Welcome ' + this.loginData.email_or_phone);
         this.router.navigate(['/home']);
       },
       error: (error) => {
         console.error('Login Failed:', error);
-        this.errorMessage = 'Invalid username or password';
-        alert('Invalid username or password');  // Show alert on failed login
-      },
+        this.errorMessage = 'Invalid credentials';
+        alert('Invalid email/phone or password');
+      }
     });
   }
 }
