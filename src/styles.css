@@ -110,3 +110,21 @@ a{
     border: none;
     outline: none;
 }
+/* breadcrumb */
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-right: .5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: .5rem;
+}
+
+.breadcrumb-item.active {
+    color: #FE0000;
+}
+
+.breadcrumb-item {
+    font-size: 1rem;
+}

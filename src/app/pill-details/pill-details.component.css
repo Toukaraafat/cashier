@@ -8,3 +8,6 @@
     outline: 0;
     box-shadow: none !important;
 }
+.card-img img{
+    width: 10vw;
+}

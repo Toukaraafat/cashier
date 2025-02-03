@@ -13,24 +13,28 @@
       <div class="col-md-7 right-side bg-white p-md-5">
         <h1 class="main-color fw-bold py-4"> مرحبا بك! </h1>
         <h5 class="text-dark pb-3">سجل دخولك بكل سهولة</h5>
-
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+        
         <!-- Phone Input -->
         <div class="input-group position-relative mb-3">
           <input type="text" class="form-control" id="phoneInput" placeholder="ادخل رقم الهاتف ,مثال 01029063398"
           [(ngModel)]="loginData.email_or_phone">
           
           <div class="custom-dropdown dropdown">
-            <div class="selected-option dropdown-toggle text-muted" data-bs-toggle="dropdown" >
-              {{ selectedCountry?.code || 'اختر الدولة' }}
-              <img [src]="selectedCountry.flag" class="flag-icon" />
+            <div class="selected-option dropdown-toggle text-muted" data-bs-toggle="dropdown" (click)="dropdownOpen = !dropdownOpen">
+              {{ selectedCountry?.phone_code || 'اختر الدولة' }}
+              <img *ngIf="selectedCountry?.image" [src]="selectedCountry.image" class="flag-icon" />
             </div>  
-            <ul class="dropdown-list dropdown-menu">
-              <li *ngFor="let country of countryList" (click)="selectCountry(country)" class="d-flex justify-content-between text-muted">
-                {{ country.code }} 
-                <img [src]="country.flag" class="flag-icon" />
+            <ul *ngIf="dropdownOpen && countryList?.length" class="dropdown-list dropdown-menu show">
+              <li *ngFor="let country of countryList" (click)="selectCountry(country); dropdownOpen = false;" class="d-flex justify-content-between text-muted">
+                {{ country.phone_code }}
+                <img *ngIf="country.image" [src]="country.image" class="flag-icon" />
               </li>
             </ul> 
           </div>
+          
         </div>
 
         <!-- Password Input -->

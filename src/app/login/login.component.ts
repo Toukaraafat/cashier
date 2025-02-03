@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,43 +12,46 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  selectedCountry: any = null;
-  countryList: any[] = [];
+  countryList: any[] = []; // Store API country data
+  selectedCountry: any = { phone_code: '', image: null }; // Default selected country
   dropdownOpen = false;
-  errorMessage: string = '';
-  isPasswordVisible: boolean = false;
 
   loginData = {
-    country_code: '',
     email_or_phone: '',
     password: ''
   };
 
+  errorMessage: string = '';
+  isPasswordVisible: boolean = false;
+
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    this.fetchCountries();
+  }
+
+  fetchCountries() {
     this.authService.getCountries().subscribe({
-      next: (data) => {
-        this.countryList = data; // Assuming API returns an array of countries with { code, flag }
+      next: (response) => {
+        this.countryList = response; // Store API response (directly assign if array)
         if (this.countryList.length > 0) {
-          this.selectedCountry = this.countryList[0]; // Default selection
-          this.loginData.country_code = this.selectedCountry.code; // Set default country code
+          this.selectedCountry = this.countryList[0]; // Default country
         }
       },
       error: (error) => {
         console.error('Error fetching countries:', error);
+        this.errorMessage = 'Failed to load countries. Please try again.';
       }
     });
   }
 
-  toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
-  }
-
   selectCountry(country: any) {
     this.selectedCountry = country;
-    this.loginData.country_code = country.code;
     this.dropdownOpen = false;
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
   }
 
   togglePasswordVisibility() {
@@ -56,18 +59,26 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.authService.login(this.loginData.country_code, this.loginData.email_or_phone, this.loginData.password).subscribe({
+    if (!this.selectedCountry.phone_code) {
+      alert('Please select a country');
+      return;
+    }
+
+    this.authService.login(
+      this.selectedCountry.phone_code,
+      this.loginData.email_or_phone,
+      this.loginData.password
+    ).subscribe({
       next: (response) => {
         console.log('Login Successful:', response);
-        this.authService.setUsername(this.loginData.email_or_phone);
+        this.authService.updateUsername(this.loginData.email_or_phone); // Update username after login
         alert('Welcome ' + this.loginData.email_or_phone);
         this.router.navigate(['/home']);
       },
       error: (error) => {
-        console.error('Login Failed:', error);
-        this.errorMessage = 'Invalid credentials';
-        alert('Invalid email/phone or password');
-      }
+        this.errorMessage = 'Invalid credentials. Please check your login details.';
+        alert(this.errorMessage); // Display the error message
+      },
     });
   }
 }
