@@ -3,10 +3,11 @@ import { Component, Input, output, OnInit, } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ProductCardComponent } from "../product-card/product-card.component";
 import { ProductsService } from '../services/products.service';
+import { OfferCardComponent } from '../offer-card/offer-card.component';
 
 @Component({
   selector: 'app-categories',
-  imports: [RouterLink, RouterLinkActive, CommonModule, ProductCardComponent],
+  imports: [RouterLink, RouterLinkActive, CommonModule, ProductCardComponent, OfferCardComponent],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css'
 })
@@ -14,9 +15,11 @@ export class CategoriesComponent implements OnInit{
   selectedCategory: any;
   constructor(private productsRequestService: ProductsService) {}
   products :any ;  
+  offers :any ;  
   categories: any[] = [];
   selectedCategoryProducts: any[] = [];
   @Input() product: any;
+  @Input() offer: any;
 
   // ngOnInit(): void {
   //   this.baseurl = this.productsRequestService.getProducts().subscribe((response : any) => this.products = response);
@@ -29,13 +32,21 @@ export class CategoriesComponent implements OnInit{
   //       this.products = data.data.categories;
   //     },
   //     error: (err) => console.error('Error fetching products:', err)
-  //   });    this.loadCategories();
+  //   });  
 
   // }
 
 
   ngOnInit(): void {
     this.loadCategories();
+    this.productsRequestService.getOffers().subscribe({
+      next: (data: any) => {
+        console.log('Products:', data.data
+        );
+        this.offers = data.data;
+      },
+      error: (err) => console.error('Error fetching products:', err)
+    });    
   }
 
   loadCategories(): void {
