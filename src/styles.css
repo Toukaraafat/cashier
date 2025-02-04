@@ -7,11 +7,28 @@
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
+
     opacity: 1;
+    border: 2px solid transparent;
+    padding-block: 0.65rem ;
+}
+.btn:hover{
+    background: transparent;
+    border: 2px solid #FE0000;
+    color: #FE0000;
+}
+.btn.reversed {
+    background: transparent;
+    border: 2px solid #FE0000;
+}
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+    color: inherit;
+    background-color: inherit;
+    border-color: inherit;
 }
 .card {
     border: 0;
-    box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -4px -4px 12px 0 rgba(0, 0, 0, 0.08), 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
     border-radius: 18px;
     /* overflow: hidden; */
 }
@@ -23,6 +40,7 @@
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 .main-color {
     color: #FE0000 !important;

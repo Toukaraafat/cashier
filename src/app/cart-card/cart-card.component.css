@@ -1,6 +1,6 @@
 .sideCart-plate {
     display: flex;
-    box-shadow: 4px 4px 12px 0 #00000033;
+    box-shadow: -4px -4px 12px 0 rgba(0, 0, 0, 0.08), 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
     border-radius: 24px;
     justify-content: space-between;
     align-items: end;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartCardComponent } from '../cart-card/cart-card.component';
+import { CategoriesComponent } from "../categories/categories.component";
 
 @Component({
   selector: 'app-side-order-details',

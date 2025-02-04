@@ -1,0 +1,45 @@
+.order-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+.bg-lightYellow{
+    background-color: #FFEBC580;
+}
+.form-check {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.form-check .form-check-input {
+    float: none;
+    margin-left: 0.5rem;
+}
+
+.form-check-input:checked {
+    background-color: #FE0000;
+    border-color: #FE0000;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+.form-check-label{
+    border: 1px solid #FE0000;
+    padding: 0.5rem;
+    background-color: #FFF2F2;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}  
+.form-check-label img{
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}

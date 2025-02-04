@@ -54,7 +54,7 @@ export class CategoriesComponent implements OnInit{
       next: (data: any)  => {
         if (data.status) {
           this.categories = data.data.categories;
-          this.selectedCategoryProducts = this.categories[0]?.dishes || [];
+          this.selectedCategoryProducts = this.categories[0]?.dishes;
         }
       },
       error: (err)  => {

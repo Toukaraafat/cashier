@@ -1,16 +1,18 @@
-.navbar{
-    box-shadow: -10px 4px 12px 0 rgba(0, 0, 0, 0.08);
-
+.navbar {
+    /* box-shadow: -10px 4px 12px 0 rgba(0, 0, 0, 0.08); */
+    box-shadow: -4px -4px 12px 0 rgba(0, 0, 0, 0.08), 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
 }
 
-.user{
+.user {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.user img{
+
+.user img {
     height: 45px;
 }
-.user-info{
+
+.user-info {
     margin-right: 1rem;
 }

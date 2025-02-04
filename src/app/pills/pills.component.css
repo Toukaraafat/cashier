@@ -1,6 +1,6 @@
 .nav-pills .nav-link.sub{
     background-color: #fff;
-    box-shadow: 4px 4px 12px 0 #00000033;
+    box-shadow: -4px -4px 12px 0 rgba(0, 0, 0, 0.08), 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{

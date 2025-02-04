@@ -1,5 +1,5 @@
 .plate {
-    box-shadow: 4px 4px 12px 0 #00000033;
+    box-shadow: -4px -4px 12px 0 rgba(0, 0, 0, 0.08), 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
     padding: 1.25rem;
     border-radius: 1.5rem;
     min-height: 320px;
@@ -16,12 +16,6 @@
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.discount {
-    text-decoration: line-through;
-    color: #FE0000;
-    margin-left: 0.5rem;
 }
 
 .plate span {

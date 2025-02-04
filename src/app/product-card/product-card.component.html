@@ -1,4 +1,4 @@
-<a data-bs-toggle="modal" [attr.data-bs-target]="'#productModal-' + product.id">
+<a data-bs-toggle="modal" [attr.data-bs-target]="'#productModal' + product.id">
     <div class="plate">
         <figure class="plate-img m-0">
             <img [src]="product.image ? product.image : 'assets/images/no-image.png'" alt />
@@ -6,7 +6,7 @@
         <div class="text-center pt-3">
             <h6 class="mb-0">{{product.name}}</h6>
             <div class="py-2">
-                <span class="discount"> {{product.discountPercentage}} ج . م</span>
+                <!-- <span class="discount"> {{product.discountPercentage}} ج . م</span> -->
                 <span>{{product.price}}ج . م</span>
             </div>
             <button class="btn">
@@ -20,7 +20,7 @@
 </a>
 
 <!-- Modal -->
-<div class="modal fade" id="productModal-{{product.id}}" tabindex="-1" aria-labelledby="productModalLabel"
+<div class="modal fade" id="productModal{{product.id}}" tabindex="-1" aria-labelledby="productModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -28,7 +28,7 @@
                 <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h2 class="text-center mb-4"> من فضلك قم بتخصيص وجبتك </h2>
+                <h2 class="text-center mb-4"> تفاصيل الوجبة </h2>
                 <div class="row mx-0">
                     <div class="col-md-6">
                         <div class="product-details ">
