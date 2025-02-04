@@ -7,12 +7,12 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./navbar.component.css'] // Fixed: `styleUrls` instead of `styleUrl`
 })
 export class NavbarComponent implements OnInit {
-  username: string | null = null; // Allow null for better error handling
+  username: string | null = null;
 
   constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {
-    this.authService.username$.subscribe((username: string | null) => {
+  ngOnInit() {
+    this.authService.username$.subscribe((username) => {
       this.username = username;
     });
   }
