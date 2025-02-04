@@ -9,6 +9,7 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { PillDetailsComponent } from './pill-details/pill-details.component';
+import { SettingsComponent } from './settings/settings.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,8 @@ export const routes: Routes = [
       { path: 'delivery-details', component: DeliveryDetailsComponent },
       { path: 'order-details', component: OrderDetailsComponent },
       { path: 'pill-details', component: PillDetailsComponent },
+      { path: 'settings', component: SettingsComponent },
+
     ],
   },
   { path: '**', redirectTo: 'login' }, // Redirect unknown routes to login
