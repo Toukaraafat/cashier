@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgxCountriesDropdownModule } from 'ngx-countries-dropdown';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -12,31 +12,32 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  selectedCountry: any;
+export class LoginComponent implements OnInit {
+  selectedCountry: any = { code: 'اختر الدولة', flag: '' }; // Default placeholder
   dropdownOpen = false;
   loginData = {
-    username: '',
-    pass: ''
+    email_or_phone: '',
+    password: ''
   };
   errorMessage: string = '';
-
-  countryList = [
-    { code: '+02', flag: 'https://flagcdn.com/w40/eg.png' },
-    { code: '+965', flag: 'https://flagcdn.com/16x12/kw.png' },
-    { code: '+44', flag: 'https://flagcdn.com/w40/gb.png' },
-  ];
-
+  countryList: any[] = []; // Initialize as empty
   isPasswordVisible: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    if (this.countryList.length > 0) {
-      this.selectedCountry = this.countryList[0];
-    }
+    this.fetchCountries();
   }
 
+  fetchCountries() {
+    this.countryList = [
+      { code: '+20', flag: 'https://flagcdn.com/w40/us.png' },
+      { code: '+44', flag: 'https://flagcdn.com/w40/gb.png' }
+    ];
+    console.log('Mock countries loaded:', this.countryList);
+  }
+  
+  
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -52,27 +53,38 @@ export class LoginComponent {
   }
 
   onLogin() {
+    if (!this.selectedCountry.code || this.selectedCountry.code === 'اختر الدولة') {
+      this.errorMessage = 'الرجاء اختيار الدولة';
+      return;
+    }
 
-    // Call the login method from AuthService
-    this.authService.login(this.loginData.username, this.loginData.pass).subscribe({
+    if (!this.loginData.email_or_phone) {
+      this.errorMessage = 'الرجاء إدخال رقم الهاتف أو البريد الإلكتروني';
+      return;
+    }
+
+    if (!this.loginData.password) {
+      this.errorMessage = 'الرجاء إدخال كلمة المرور';
+      return;
+    }
+
+    const loginPayload = {
+      country_code: this.selectedCountry.code,
+      email_or_phone: this.loginData.email_or_phone,
+      password: this.loginData.password
+    };
+
+    this.authService.login(loginPayload).subscribe({
       next: (response) => {
         console.log('Login Successful:', response);
-
-        // Update the username in AuthService
-        this.authService.setUsername(this.loginData.username);  // Set the username in the service
-
-        // Show welcome alert with username
-        alert('Welcome ' + this.loginData.username);
-
-        // Redirect to the home page
+        this.authService.setUsername(this.loginData.email_or_phone);
+        alert('مرحبا ' + this.loginData.email_or_phone);
         this.router.navigate(['/home']);
       },
       error: (error) => {
         console.error('Login Failed:', error);
-        this.errorMessage = 'Invalid username or password';
-        alert('Invalid username or password');  // Show alert on failed login
+        this.errorMessage = error.error?.message || 'فشل تسجيل الدخول، تحقق من البيانات المدخلة';
       },
     });
   }
 }
- 

@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://dummyjson.com/auth/login';
+  private apiUrl = 'https://erpsystem.testdomain100.online/api/login';
   
   // Private BehaviorSubject to hold the current username value
   private usernameSubject = new BehaviorSubject<string>(''); 
@@ -18,8 +18,8 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   // Login method to authenticate user and return token
-  login(username: string, password: string): Observable<any> {
-    return this.http.post(this.apiUrl, { username, password });
+  login(loginData: { country_code: string; email_or_phone: string; password: string }): Observable<any> {
+    return this.http.post(this.apiUrl, loginData);
   }
 
   // Set the username and emit the change to all subscribers
@@ -32,5 +32,10 @@ export class AuthService {
     this.usernameSubject.next(''); // Reset the username to an empty string
   }
 
- 
+  private countryApiUrl = 'https://erpsystem.testdomain100.online/api/country';
+
+  // Fetch country list from API
+  getCountries(): Observable<any> {
+    return this.http.get<any>(this.countryApiUrl);
+  }
 }
