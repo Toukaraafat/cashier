@@ -35,5 +35,5 @@ export const routes: Routes = [
 
     ],
   },
-  { path: '**', redirectTo: 'login' }, // Redirect unknown routes to login
+  { path: '**', redirectTo: 'login' }, //  unknown routes 
 ];
