@@ -44,15 +44,36 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a routerLink="/logOut" class="sidebar-link" routerLinkActive="active_link" [routerLinkActiveOptions]="{exact:
-          true}">
-                    <img src="assets/images/logout.png" />
-                    <span class="pe-3">تسجيل الخروج</span>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#logoutModal" class="sidebar-link">
+                  <img src="assets/images/logout.png" />
+                  <span class="pe-3">تسجيل الخروج</span>
                 </a>
-            </li>
+              </li>
+              
+              
 
 
         </ul>
         <img class="sidebar-man" src="assets/images/sidebar-man.png" alt="sidebar-man" />
     </div>
 </div>
+<!-- Logout Confirmation Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+            <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="fa-solid fa-right-from-bracket main-color fs-2"></i>
+          <h5 class="fw-bold">سيتم تسجيل  خروجك ؟</h5>
+        </div>
+        <div class="modal-footer border-0 justify-content-center gap-5">
+          <button type="button" class="btn btn text-white w-25" (click)="confirmLogout()"> تأكيد</button>
+           <button type="button" class="btn btn-no w-25" data-bs-dismiss="modal">إلغاء</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  

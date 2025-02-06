@@ -38,4 +38,10 @@ export class AuthService {
   getCountries(): Observable<any> {
     return this.http.get<any>(this.countryApiUrl);
   }
+
+  // Logout method to log out the user
+  logout(): Observable<any> {
+    const logoutUrl = 'https://erpsystem.testdomain100.online/api/logout';
+    return this.http.post(logoutUrl, {});
+  }
 }

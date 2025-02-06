@@ -74,17 +74,16 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     if (!this.selectedCountry.code || this.selectedCountry.code === 'اختر الدولة') {
-      this.errorMessage = 'الرجاء اختيار الدولة';
+      this.errorMessage = ' أختر الدولة';
       return;
     }
   
     if (!this.loginData.email_or_phone) {
-      this.errorMessage = 'الرجاء إدخال رقم الهاتف أو البريد الإلكتروني';
-      return;
+      this.errorMessage = ' أدخل رقم الهاتف '
     }
   
     if (!this.loginData.password) {
-      this.errorMessage = 'الرجاء إدخال كلمة المرور';
+      this.errorMessage = ' أدخل كلمة المرور';
       return;
     }
   
@@ -96,17 +95,16 @@ export class LoginComponent implements OnInit {
   
     this.authService.login(loginPayload).subscribe({
       next: (response) => {
-        console.log('Login Successful:', response);
+        
   
         // Check if login is successful and response contains the token
         if (response.status && response.data.access_token) {
           this.authService.setUsername(this.loginData.email_or_phone);
   
-          // Debug log
-          console.log('Navigating to home page...');
+         
   
           // Show success message
-          alert('تم تسجيل الدخول بنجاح');
+          // alert('تم تسجيل الدخول بنجاح');
   
           // Redirect to home page
           this.router.navigate(['/home']);
