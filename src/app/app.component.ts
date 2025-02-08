@@ -17,7 +17,7 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
   standalone: true,
   imports: [RouterOutlet,
     CommonModule,
-    RouterModule,HomeComponent,MainLayoutComponent,AuthLayoutComponent],
+    RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
