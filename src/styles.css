@@ -146,3 +146,6 @@ a{
 .breadcrumb-item {
     font-size: 1rem;
 }
+.modal {
+    z-index: 1060; /* Higher than other elements */
+  }

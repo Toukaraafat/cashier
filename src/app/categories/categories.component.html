@@ -61,7 +61,7 @@
                         (sendToCategories)="recieveFromProduct($event)"></app-product-card>
                 </div>
                 }
-                @if (selectedCategoryProducts.length === 0) {
+                @empty{
                 <p>No products available</p>
                 }
 
