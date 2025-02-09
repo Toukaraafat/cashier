@@ -41,8 +41,8 @@ export class CategoriesComponent implements OnInit{
     this.loadCategories();
     this.productsRequestService.getOffers().subscribe({
       next: (data: any) => {
-        console.log('Products:', data.data
-        );
+        // console.log('Products:', data.data
+        // );
         this.offers = data.data;
       },
       error: (err) => console.error('Error fetching products:', err)
@@ -53,7 +53,7 @@ export class CategoriesComponent implements OnInit{
     this.productsRequestService.getProducts().subscribe({
       next: (data: any)  => {
         if (data.status) {
-          this.categories = data.data.categories;
+          this.categories = data.data;
           this.selectedCategoryProducts = this.categories[0]?.dishes;
         }
       },
