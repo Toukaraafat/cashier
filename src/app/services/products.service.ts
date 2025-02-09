@@ -21,7 +21,7 @@ export class ProductsService {
       headers: this.getHeaders(),
     });
   }
-  getCategories(): Observable<any> {
+  getMenuDishes(): Observable<any> {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
     return this.http.get(`${this.apiUrl}/menu-dishes`, { headers });
   }

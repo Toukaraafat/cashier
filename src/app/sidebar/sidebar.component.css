@@ -1,6 +1,10 @@
 .sidebar {
+    position: fixed;     
+    top: 0;
+    right: 0;
+    height: 100vh; 
     box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.08);
-    height: 100%;
+     
     padding-inline: 1rem;
     padding-top: 1rem;
      display: flex;
@@ -44,3 +48,15 @@
     object-fit: contain;
     object-position: bottom;
   }
+  .btn-no {
+    box-shadow: none;
+    color: #FE0000;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+
+    opacity: 1;
+    border: 2px solid #FE0000;
+    padding-block: 0.65rem ;
+}

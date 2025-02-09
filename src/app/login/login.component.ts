@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgxCountriesDropdownModule } from 'ngx-countries-dropdown';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../services/auth.service'; // Keep this import
 import { Router } from '@angular/router';
+
+interface Country {
+  code: string;
+  flag: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -12,36 +17,52 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  selectedCountry: any;
+export class LoginComponent implements OnInit {
+  selectedCountry: Country = { code: 'اختر الدولة', flag: '' }; 
   dropdownOpen = false;
   loginData = {
-    username: '',
-    pass: ''
+    email_or_phone: '',
+    password: ''
   };
   errorMessage: string = '';
-
-  countryList = [
-    { code: '+02', flag: 'https://flagcdn.com/w40/eg.png' },
-    { code: '+965', flag: 'https://flagcdn.com/16x12/kw.png' },
-    { code: '+44', flag: 'https://flagcdn.com/w40/gb.png' },
-  ];
-
+  countryList: Country[] = []; 
   isPasswordVisible: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    if (this.countryList.length > 0) {
-      this.selectedCountry = this.countryList[0];
-    }
+    this.fetchCountries();
+  }
+
+  fetchCountries() {
+    this.authService.getCountries().subscribe({
+      next: (response) => {
+        console.log('API Response:', response); // Debug log
+  
+        // Check if the response contains the `data` array
+        if (response.data && Array.isArray(response.data)) {
+          // Map the `data` array to extract only `phone_code` and `image`
+          this.countryList = response.data.map((country: { phone_code: string, image: string }) => ({
+            code: country.phone_code,
+            flag: country.image
+          }));
+  
+          console.log('Countries Loaded:', this.countryList);
+        } else {
+          this.errorMessage = 'No country data found in the response.';
+        }
+      },
+      error: () => {
+        this.errorMessage = 'Failed to load country data.';
+      },
+    });
   }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
 
-  selectCountry(country: any) {
+  selectCountry(country: Country) {
     this.selectedCountry = country;
     this.dropdownOpen = false;
     console.log('Selected country:', this.selectedCountry);
@@ -52,25 +73,48 @@ export class LoginComponent {
   }
 
   onLogin() {
-
-    // Call the login method from AuthService
-    this.authService.login(this.loginData.username, this.loginData.pass).subscribe({
+    if (!this.selectedCountry.code || this.selectedCountry.code === 'اختر الدولة') {
+      this.errorMessage = ' أختر الدولة';
+      return;
+    }
+  
+    if (!this.loginData.email_or_phone) {
+      this.errorMessage = ' أدخل رقم الهاتف '
+    }
+  
+    if (!this.loginData.password) {
+      this.errorMessage = ' أدخل كلمة المرور';
+      return;
+    }
+  
+    const loginPayload = {
+      country_code: this.selectedCountry.code,
+      email_or_phone: this.loginData.email_or_phone,
+      password: this.loginData.password
+    };
+  
+    this.authService.login(loginPayload).subscribe({
       next: (response) => {
-        console.log('Login Successful:', response);
-
-        // Update the username in AuthService
-        this.authService.setUsername(this.loginData.username);  // Set the username in the service
-
-        // Show welcome alert with username
-        alert('Welcome ' + this.loginData.username);
-
-        // Redirect to the home page
-        this.router.navigate(['/home']);
+        
+  
+        // Check if login is successful and response contains the token
+        if (response.status && response.data.access_token) {
+          this.authService.setUsername(this.loginData.email_or_phone);
+  
+         
+  
+          // Show success message
+          // alert('تم تسجيل الدخول بنجاح');
+  
+          // Redirect to home page
+          this.router.navigate(['/home']);
+        } else {
+          this.errorMessage = response.message || 'فشل تسجيل الدخول، تحقق من البيانات المدخلة';
+        }
       },
       error: (error) => {
         console.error('Login Failed:', error);
-        this.errorMessage = 'Invalid username or password';
-        alert('Invalid username or password');  // Show alert on failed login
+        this.errorMessage = error.error?.message || 'فشل تسجيل الدخول، تحقق من البيانات المدخلة';
       },
     });
   }

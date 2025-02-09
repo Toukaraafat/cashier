@@ -7,7 +7,7 @@
             <h6 class="mb-0">{{product.name}}</h6>
             <div class="py-2">
                 <!-- <span class="discount"> {{product.discountPercentage}} ج . م</span> -->
-                <span>{{product.price}}ج . م</span>
+                <span>{{product.price}} {{ product.currency_symbol }}</span>
             </div>
             <button class="btn">
                 + إضافة
@@ -36,77 +36,62 @@
                             </h4>
                             <div class="choices my-3">
                                 <form>
+                                    @for (size of product.sizes; track $index) {
+                                    <div class="form-check">
+                                        <div>
+                                            <input class="form-check-input" type="radio" name="options"
+                                                id="option{{product.id}}" value="option{{product.id}}">
+                                            <label class="form-check-label" for="option{{product.id}}">
+                                                {{ size.name }}
+                                            </label>
+                                        </div>
+                                        <span>{{ size.price }} {{ size.currency_symbol }}</span>
+
+                                    </div>
+                                    }@empty{
                                     <div class="form-check">
                                         <div>
                                             <input class="form-check-input" type="radio" name="options" id="option1"
-                                                value="option1">
+                                                value="option1" checked>
                                             <label class="form-check-label" for="option1">
-                                                ربع فرخة
+                                                الحجم الطبيعي
                                             </label>
                                         </div>
-                                        <span>100 ج.م</span>
-
                                     </div>
-                                    <div class="form-check">
-                                        <div>
-                                            <input class="form-check-input" type="radio" name="options" id="option2"
-                                                value="option2">
-                                            <label class="form-check-label" for="option2">
-                                                نص فرخة
-                                            </label>
-                                        </div>
-                                        <span>200 ج.م</span>
-                                    </div>
-                                    <div class="form-check">
-                                        <div>
-                                            <input class="form-check-input" type="radio" name="options" id="option3"
-                                                value="option3">
-                                            <label class="form-check-label" for="option3">
-                                                فرخة كاملة
-                                            </label>
-                                        </div>
-                                        <span>400 ج.م</span>
-
-                                    </div>
+                                    }
                                 </form>
                             </div>
                             <h4> اضافات
                             </h4>
                             <div class="choices my-3">
+                                @for (category of product.addon_categories; track $index) {
+                                {{ category.name }}
                                 <form>
+                                    @for (addon of category.addons; track $index) {
                                     <div class="form-check">
                                         <div>
-                                            <input class="form-check-input" type="checkbox" name="options" id="option1"
-                                                value="option1">
-
-                                            <label class="form-check-label" for="option1">
-                                                دقوس </label>
+                                            <input class="form-check-input" type="checkbox" name="options"
+                                                id="option{{product.id}}" value="option{{product.id}}">
+                                            <label class="form-check-label" for="option{{product.id}}">
+                                                {{ addon.name }} </label>
                                         </div>
-                                        <span>100 ج.م</span>
-
-                                    </div>
-                                    <div class="form-check">
-                                        <div>
-                                            <input class="form-check-input" type="checkbox" name="options" id="option2"
-                                                value="option2">
-                                            <label class="form-check-label" for="option2">
-                                                جمبري
-                                            </label>
-                                        </div>
-                                        <span>200 ج.م</span>
-                                    </div>
-                                    <div class="form-check">
-                                        <div>
-                                            <input class="form-check-input" type="checkbox" name="options" id="option3"
-                                                value="option3">
-                                            <label class="form-check-label" for="option3">
-                                                رز
-                                            </label>
-                                        </div>
-                                        <span>400 ج.م</span>
+                                        <span>{{ addon.price }} {{ addon.currency_symbol }}</span>
 
                                     </div>
+                                    }@empty{
+                                        <div class="form-check">
+                                            <div>
+                                                <input class="form-check-input" type="checkbox" name="options"
+                                                id="option{{product.id}}" value="option{{product.id}}" checked>
+                                            <label class="form-check-label" for="option{{product.id}}"> بدون إضافات
+                                                </label>
+                                            </div>
+                                        </div>
+                                    }
+
                                 </form>
+                                }
+
                             </div>
                         </div>
                     </div>

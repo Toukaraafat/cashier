@@ -43,8 +43,13 @@
     background: #f0f0f0;
   }
     
-.input-group input{
+  .input-group input{
     border: 1px solid #f1eff1;
+    border-radius: 15px;
+}
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select, .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
 }
 .input-group input::placeholder{
    color: #808080;

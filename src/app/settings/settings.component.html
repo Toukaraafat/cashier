@@ -1,1 +1,54 @@
-<p>settings works!</p>
+<section class="profile">
+    <div class="container pb-sm-5 pb-4">
+        <h4 class="my-4 fw-bold">  الاعدادات </h4>
+        <div class="row justify-content-between">
+            <div class="col-lg-3">
+                    <div class="nav btn-static-danger flex-column nav-pills rounded-2" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link active text-dark fs-5" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab"
+                            aria-controls="v-pills-profile" aria-selected="false">   <i class="fas fa-user-alt ms-1 main-color"></i>الملف الشخصى </button>
+                      
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="card p-3">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab">
+                            <div class="user d-flex align-items-center justify-content-start">
+                                <img src="assets/images/user.png">
+                                <div class="user-info ">
+                                    <h6>{{ username || 'username' }}</h6>
+                                   <h6 class="text-muted">كاشير</h6>
+                                </div>
+                            </div>
+                            <div class="input-group  my-3">
+                                <input type="text" class="form-control" id="customerName" placeholder="اسم العميل  مثال: سارة عامر">
+                            </div>
+                            <div class="input-group  my-3">
+                                <input type="text" class="form-control" id="customerPhone" placeholder="ادخل رقم الهاتف ,مثال01029063398">
+                                <div class="custom-dropdown dropdown">
+                                    <div class="selected-option dropdown-toggle text-muted" data-bs-toggle="dropdown">
+                                        {{ selectedCountry.code }}
+                                        <img [src]="selectedCountry.flag" class="flag-icon" />
+                                    </div>
+                                    <ul class="dropdown-list dropdown-menu">
+                                        <li *ngFor="let country of countryList" (click)="selectCountry(country)"
+                                            class="d-flex justify-content-between text-muted">
+                                            {{ country.code }}
+                                            <img [src]="country.flag" class="flag-icon" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end pb-4 pt-2">
+                                <button type="submit" class="btn px-5 rounded-4 ">حفظ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
