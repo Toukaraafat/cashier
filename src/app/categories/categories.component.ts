@@ -79,9 +79,9 @@ export class CategoriesComponent implements OnInit {
     this.productsRequestService.getMenuDishes().subscribe(response => {
       if (response.status) {
         this.categories = response.data;
-        if (this.categories.length > 0) {
+        /* if (this.categories.length > 0) {
           this.onCategorySelect(this.categories[0]); // Select first category by default
-        }
+        } */
       }
     });
   }
