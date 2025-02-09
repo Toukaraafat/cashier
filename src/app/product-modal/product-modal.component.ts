@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-modal',
@@ -13,7 +14,10 @@ export class ProductModalComponent implements OnInit {
   selectedProduct: any;
   bootstrap: any; // Import Bootstrap JS (needed for modal)
 
-  constructor(private productService: ProductsService) { }
+  // constructor(private productService: ProductsService) { }
+  @Input() src: any;
+  constructor(public activeModal: NgbActiveModal,private productService: ProductsService) { }
+
 
   ngOnInit(): void {
     this.productService.product$.subscribe(product => {
