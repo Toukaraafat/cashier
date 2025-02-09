@@ -18,8 +18,8 @@ export class CategoriesComponent implements OnInit {
   selectedCategory: any = null;
   selectedCategoryProducts: any[] = [];
 
-  @Input() product: any; // If used, implement logic for handling product.
-  @Input() offer: any; // If used, implement logic for handling offer.
+  @Input() item: any; 
+  @Input() offer: any; 
 
   constructor(private productsRequestService: ProductsService) { }
 
@@ -38,25 +38,25 @@ export class CategoriesComponent implements OnInit {
     this.productsRequestService.getMenuDishes().subscribe(response => {
       if (response.status) {
         this.categories = response.data;
-        if (this.categories.length > 0) {
-          this.onCategorySelect(this.categories[0]); // Select first category by default
-        }
+        // if (this.categories.length > 0) {
+        //   this.onCategorySelect(this.categories[0]); // Select first category by default
+        // }
       }
     });
   }
 
   onCategorySelect(category: any): void {
     if (!category || !Array.isArray(category.dishes)) {
-      this.selectedCategoryProducts = []; // Ensure no crash if dishes is undefined/null
+      this.selectedCategoryProducts = []; 
       return;
     }
 
     this.selectedCategory = category;
     this.selectedCategoryProducts = category.dishes
-      .filter((d: { dish: any; }) => d && d.dish) // Ensure `d` and `d.dish` exist before mapping
+      .filter((d: { dish: any; }) => d && d.dish)
       .map((d: { dish: any; sizes: any; addon_categories: any; }) => ({
         ...d.dish,
-        sizes: Array.isArray(d.sizes) ? d.sizes : [], // Ensure it's always an array
+        sizes: Array.isArray(d.sizes) ? d.sizes : [],
         addon_categories: Array.isArray(d.addon_categories) ? d.addon_categories : []
       }));
   }

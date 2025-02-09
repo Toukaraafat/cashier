@@ -16,24 +16,17 @@ export class ProductsService {
       'Content-Type': 'application/json',
     });
   }
-  getProducts(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/menu-dishes`, {
-      headers: this.getHeaders(),
-    });
-  }
+
   getMenuDishes(): Observable<any> {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
     return this.http.get(`${this.apiUrl}/menu-dishes`, { headers });
   }
 
-  getProductsByCategory(categoryId: number): Observable<any> {
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
-    return this.http.get(`${this.apiUrl}/menu-dishes/${categoryId}/dishes`, { headers });
-  
-  }
   getOffers(){
     return this.http.get(`${this.apiUrl}/offers`, {
       headers: this.getHeaders(),
     });
   }
+
+
 }
