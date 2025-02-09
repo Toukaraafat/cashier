@@ -15,4 +15,5 @@ category: any;
     // console.log(id)
     this.sendToCategories.emit(id) //method byakhod l value de todyha ll parent
   }
+
 }
