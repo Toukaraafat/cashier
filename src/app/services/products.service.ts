@@ -16,7 +16,12 @@ export class ProductsService {
       'Content-Type': 'application/json',
     });
   }
+  private productSubject = new BehaviorSubject<any>(null);
+  product$ = this.productSubject.asObservable();
 
+  setProduct(product: any) {
+    this.productSubject.next(product);
+  }
   getMenuDishes(): Observable<any> {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
     return this.http.get(`${this.apiUrl}/menu-dishes`, { headers });

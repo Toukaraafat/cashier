@@ -19,9 +19,15 @@ export class ProductCardComponent implements OnInit {
   // }
   ngOnInit(): void {}
 
-  openModal(item: any) : void{
-    this.selectedProduct = item;
-    console.log(item);
-  }
+  // openModal(item: any) : void{
+  //   this.selectedProduct = item;
+  //   console.log(item);
+  // }
+  constructor(private productService: ProductsService) {}
 
+  openModal(item: any): void {
+    this.productService.setProduct(item);
+        console.log(item);
+
+  }
 }

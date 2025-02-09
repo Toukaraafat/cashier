@@ -7,7 +7,7 @@ import { ProductsService } from '../services/products.service';
   templateUrl: './product-modal.component.html',
   styleUrl: './product-modal.component.css'
 })
-export class ProductModalComponent {
+export class ProductModalComponent implements OnInit {
   @Input() item: any;
   product: any;
   selectedProduct: any;
@@ -16,6 +16,9 @@ export class ProductModalComponent {
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-
+    this.productService.product$.subscribe(product => {
+      this.selectedProduct = product;
+      console.log(this.selectedProduct);
+    });
   }
 }
